@@ -1,0 +1,534 @@
+{
+  "totalStats": {
+    "artists": {
+      "distinctCount": 134413
+    },
+    "tracks": {
+      "distinctCount": 195,
+      "totalMinutes": 8760,
+      "totalPlays": 288,
+      "totalPlayDays": 55,
+      "consecutiveDays": 0
+    },
+    "podcasts": {
+      "distinctCount": 38,
+      "totalMinutes": 36789
+    },
+    "podcastEpisodes": {
+      "distinctCount": 336
+    },
+    "alexa": {
+      "totalMinutes": 35208
+    }
+  },
+  "topTracks": [
+    {
+      "id": "B0BRYG3YQJ",
+      "count": 7,
+      "minutes": 19,
+      "countPercentile": 9,
+      "playDays": 5
+    },
+    {
+      "id": "B00DFQDOW2",
+      "count": 5,
+      "minutes": 19,
+      "countPercentile": 11,
+      "playDays": 4
+    },
+    {
+      "id": "B07HKT8DL5",
+      "count": 5,
+      "minutes": 10,
+      "countPercentile": 39,
+      "playDays": 4
+    },
+    {
+      "id": "B0CPJCPDH4",
+      "count": 5,
+      "minutes": 8,
+      "countPercentile": 19,
+      "playDays": 3
+    },
+    {
+      "id": "B0D3WLP4XN",
+      "count": 5,
+      "minutes": 9,
+      "countPercentile": 13,
+      "playDays": 3
+    },
+    {
+      "id": "B001NB4W4A",
+      "count": 4,
+      "minutes": 13,
+      "countPercentile": 16,
+      "playDays": 2
+    },
+    {
+      "id": "B00C7D3VT0",
+      "count": 4,
+      "minutes": 10,
+      "countPercentile": 19,
+      "playDays": 2
+    },
+    {
+      "id": "B07WDNL1DV",
+      "count": 4,
+      "minutes": 6,
+      "countPercentile": 9,
+      "playDays": 3
+    },
+    {
+      "id": "B07WDNL8BK",
+      "count": 4,
+      "minutes": 6,
+      "countPercentile": 14,
+      "playDays": 3
+    },
+    {
+      "id": "B097Q8DRW8",
+      "count": 4,
+      "minutes": 14,
+      "countPercentile": 7,
+      "playDays": 3
+    }
+  ],
+  "topAlbums": [
+    {
+      "id": "B001NB6IN8",
+      "minutes": 27
+    },
+    {
+      "id": "B09HJPMX4M",
+      "minutes": 24
+    },
+    {
+      "id": "B0D3WN3XB9",
+      "minutes": 20
+    },
+    {
+      "id": "B0BRYG6FZL",
+      "minutes": 19
+    },
+    {
+      "id": "B00DFQDNOQ",
+      "minutes": 19
+    },
+    {
+      "id": "B001U823B0",
+      "minutes": 16
+    }
+  ],
+  "topArtists": [
+    {
+      "id": "B000QJJOTI",
+      "count": 21,
+      "minutes": 522225,
+      "minutesPercentile": 62,
+      "tracks": [
+        {
+          "id": "B001NB4W4A",
+          "count": 4
+        },
+        {
+          "id": "B00C7D3VT0",
+          "count": 4
+        },
+        {
+          "id": "B001NAZLL4",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "B000QJPXG6",
+      "count": 16,
+      "minutes": 52,
+      "minutesPercentile": 61,
+      "tracks": [
+        {
+          "id": "B001U848CW",
+          "count": 3
+        },
+        {
+          "id": "B000SXL3XW",
+          "count": 2
+        },
+        {
+          "id": "B000SX9ZAU",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "B000QJNL2Y",
+      "count": 24,
+      "minutes": 37,
+      "minutesPercentile": 82,
+      "tracks": [
+        {
+          "id": "B0CHG1M37M",
+          "count": 4
+        },
+        {
+          "id": "B007X0VEY6",
+          "count": 3
+        },
+        {
+          "id": "B002LVKAY2",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "B000QJO20O",
+      "count": 9,
+      "minutes": 33,
+      "minutesPercentile": 89,
+      "tracks": [
+        {
+          "id": "B00DFQDOW2",
+          "count": 5
+        },
+        {
+          "id": "B097Q8DRW8",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "B00GGOQNTG",
+      "count": 11,
+      "minutes": 33,
+      "minutesPercentile": 89,
+      "tracks": [
+        {
+          "id": "B09HJDYH31",
+          "count": 3
+        },
+        {
+          "id": "B09HJPDG9K",
+          "count": 3
+        },
+        {
+          "id": "B07HDXTSNR",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "topGenres": [
+    {
+      "id": "dpRWm1xb",
+      "count": 57,
+      "minutes": 153,
+      "tracks": [
+        {
+          "id": "B0BRYG3YQJ",
+          "count": 7
+        },
+        {
+          "id": "B0CPJCPDH4",
+          "count": 5
+        },
+        {
+          "id": "B0DG7YRZ9P",
+          "count": 3
+        },
+        {
+          "id": "B0055DNHO8",
+          "count": 2
+        },
+        {
+          "id": "B00GH7OMRM",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "za-1TQ7u",
+      "count": 49,
+      "minutes": 203,
+      "tracks": [
+        {
+          "id": "B00DFQDOW2",
+          "count": 5
+        },
+        {
+          "id": "B07HKT8DL5",
+          "count": 5
+        },
+        {
+          "id": "B097Q8DRW8",
+          "count": 4
+        },
+        {
+          "id": "B0CHG1M37M",
+          "count": 4
+        },
+        {
+          "id": "B001U848CW",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "aFyug8oD",
+      "count": 45,
+      "minutes": 106,
+      "tracks": [
+        {
+          "id": "B0CPJCPDH4",
+          "count": 5
+        },
+        {
+          "id": "B0D16T2QXP",
+          "count": 3
+        },
+        {
+          "id": "B002LVIA1W",
+          "count": 2
+        },
+        {
+          "id": "B002LVKAY2",
+          "count": 2
+        },
+        {
+          "id": "B002U94OCO",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "cwCUrJOR",
+      "count": 38,
+      "minutes": 106,
+      "tracks": [
+        {
+          "id": "B0BRYG3YQJ",
+          "count": 7
+        },
+        {
+          "id": "B0CPJCPDH4",
+          "count": 5
+        },
+        {
+          "id": "B0D16T2QXP",
+          "count": 3
+        },
+        {
+          "id": "B0DG7YRZ9P",
+          "count": 3
+        },
+        {
+          "id": "B002LVIA1W",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "_YBW-yD-",
+      "count": 19,
+      "minutes": 84,
+      "tracks": [
+        {
+          "id": "B001NB4W4A",
+          "count": 4
+        },
+        {
+          "id": "B00C7D3VT0",
+          "count": 4
+        },
+        {
+          "id": "B001NAZLL4",
+          "count": 3
+        },
+        {
+          "id": "B001U848CW",
+          "count": 3
+        },
+        {
+          "id": "B000SXL3XW",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "topDecades": [
+    {
+      "id": "1960s",
+      "count": 127,
+      "minutes": 280,
+      "tracks": [
+        {
+          "id": "B0BRYG3YQJ",
+          "count": 7
+        },
+        {
+          "id": "B0CPJCPDH4",
+          "count": 5
+        },
+        {
+          "id": "B0D3WLP4XN",
+          "count": 5
+        },
+        {
+          "id": "B0CHG1M37M",
+          "count": 4
+        },
+        {
+          "id": "B0CKF2W7LH",
+          "count": 4
+        }
+      ]
+    }
+  ],
+  "topAlexaRequests": [
+    {
+      "id": "B08NPGFN4W",
+      "count": 79,
+      "minutes": 1434,
+      "entityType": "ARTIST"
+    },
+    {
+      "id": "B079DY61KC",
+      "count": 21,
+      "minutes": 866,
+      "entityType": "ARTIST"
+    }
+  ],
+  "topNewArtistDiscovery": [
+    {
+      "id": "B00N68KUTO",
+      "minutes": 448.0,
+      "timestamp": "1714521600",
+      "tracks": [
+        {
+          "id": "B0D1HPDDWV",
+          "count": 127
+        },
+        {
+          "id": "B0CZGMRQP4",
+          "count": 22
+        },
+        {
+          "id": "B0D1HBD8GR",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "topEarlyAlbumDiscovery": [
+    {
+      "id": "B0D1HGC169",
+      "minutes": 2,
+      "count": 1,
+      "rank": 1189049.0,
+      "tracks": [
+        {
+          "id": "B0D1HBD8GR",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "firstHalf": {
+    "count": 15,
+    "peakMonth": 2,
+    "peakMonthPlays": 20,
+    "topTrack": "B00DFQDOW2"
+  },
+  "secondHalf": {
+    "count": 16,
+    "peakMonth": 11,
+    "peakMonthPlays": 73,
+    "topTrack": "B07HKT8DL5"
+  },
+  "topPodcasts": [
+    {
+      "id": "4057ce27-1dcc-4456-b905-e46daf3f7457",
+      "count": 2400,
+      "minutes": 32846,
+      "minutesPercentile": 3
+    },
+    {
+      "id": "835a6522-6b3c-4bbf-b80a-d3f9a3583b55",
+      "count": 152,
+      "minutes": 1391,
+      "minutesPercentile": 19
+    },
+    {
+      "id": "2823c6c3-914e-41d0-82c0-0ce019a46e98",
+      "count": 14,
+      "minutes": 1154,
+      "minutesPercentile": 2
+    },
+    {
+      "id": "9a007e00-d3ec-4f60-9aa3-d91f0cdd7c03",
+      "count": 8,
+      "minutes": 365,
+      "minutesPercentile": 41
+    },
+    {
+      "id": "41dd97a6-3c81-49d8-9211-ef8416e06880",
+      "count": 20,
+      "minutes": 246,
+      "minutesPercentile": 17
+    }
+  ],
+  "topPodcastCategories": [
+    {
+      "id": "dmp.category.c51cf213-bf73-4fd4-8535-36b3a223581d",
+      "count": 1881,
+      "minutes": 20919
+    },
+    {
+      "id": "dmp.category.92dd5c48-8800-4c4c-94cb-04e74e920892",
+      "count": 73,
+      "minutes": 1745
+    },
+    {
+      "id": "dmp.category.3b37071a-6db6-4549-84d4-d4d6f1afa714",
+      "count": 152,
+      "minutes": 1391
+    },
+    {
+      "id": "dmp.category.2c48db67-78c0-4981-adf3-b33cac18d3a3",
+      "count": 19,
+      "minutes": 451
+    },
+    {
+      "id": "dmp.category.d5936d9f-2d82-4be7-9506-1411501d7897",
+      "count": 17,
+      "minutes": 118
+    }
+  ],
+  "topPlaylists": [
+    {
+      "id": "B0D7QDDRKV",
+      "minutes": 75,
+      "playDays": 6
+    },
+    {
+      "id": "B0B87GYGDG",
+      "minutes": 52,
+      "playDays": 2
+    },
+    {
+      "id": "B01J6MV2KO",
+      "minutes": 45,
+      "playDays": 5
+    },
+    {
+      "id": "57259baafa594269903afcdc0174a75adede",
+      "minutes": 39,
+      "playDays": 4
+    },
+    {
+      "id": "B0DDCSBJC5",
+      "minutes": 20,
+      "playDays": 3
+    }
+  ],
+  "eligibility": true
+}
