@@ -26,8 +26,12 @@ public class YIRTestCase {
     private Helper helper;
     public AppiumDriver driver;
     public IOSSongLapseTester iossonglapseTester;
-    public ValidateEachFrame validateEachFrame;;
+    public ValidateEachFrame validateEachFrame;
     Map<String, String> songs = JasonExtraction.songsMap;
+    @BeforeClass(alwaysRun = true)
+    public void classSetUp() throws Exception {
+        JasonExtraction.extractJson();
+    }
 
     @BeforeMethod(alwaysRun = true)
     public void setup() throws Exception {
@@ -49,16 +53,11 @@ public class YIRTestCase {
         helper = new Helper(driver, wait);
         validateEachFrame = new ValidateEachFrame(driver, helper, wait);
         iossonglapseTester = new IOSSongLapseTester(driver, wait, helper, validateEachFrame);
-        JasonExtraction.extractJson();
-
     }
-
-
 
     @Test(priority = 0)
     public void test_S101_FirstPage() throws InterruptedException {
-        System.out.println("\n====================================================================================");
-
+        System.out.println("\n========================================================================================");
         System.out.println("\nCase 1: S1.01 Verify the first page, 'Special Delivery'");
         Assert.assertTrue(validateEachFrame.isFirstPageDisplayed());
     }
@@ -79,6 +78,7 @@ public class YIRTestCase {
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(helper.weFound_xpath)));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Assert.assertTrue(validateEachFrame.isPartOfStringFound(totalMinutes));
         System.out.println("We spent " + totalMinutes + " minutes together this year");
     }
@@ -92,6 +92,7 @@ public class YIRTestCase {
         String decadeFromJson = JasonExtraction.getTopDecadeFromJson();
         Assert.assertEquals(decade, decadeFromJson.substring(2));
         System.out.println("Decade is " + decade);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
 //    @Test(priority = 4)
@@ -99,7 +100,6 @@ public class YIRTestCase {
 //        System.out.println("\nCase 5: Open Share from Top decade Page");
 //        helper.openShareCard("testOpenShareFromTopDecade");
 //    }
-
 
     @Test(priority = 5)
     public void test_S501_ValidateThereWereSomeGenre() throws InterruptedException {
@@ -262,6 +262,7 @@ public class YIRTestCase {
     @Test(priority = 16)
     public void test_S11_02_YourTopArtist() throws InterruptedException {
         System.out.println("\nCase 17: S11.0.2 Your Top Artist");
+        helper.goNextFrame(9);
         //-- extract data from json to verify --//
         int minutes = JasonExtraction.topArtistsArray.getJSONObject(0).getInt("minutes");
         String artistID = JasonExtraction.topArtistsArray.getJSONObject(0).getString("id");
@@ -285,6 +286,7 @@ public class YIRTestCase {
     @Test(priority = 17)
     public void test_S13_01_TopArtistRareCard() throws InterruptedException {
         System.out.println("\nCase 18: S13.0.1 Top Artist Rare Card");
+        helper.goNextFrame(10);
         //-- extract data from json to verify --//
         int minutesPercentileFromJson = JasonExtraction.topArtistsArray.getJSONObject(0).getInt("minutesPercentile");
         String artistID = JasonExtraction.topArtistsArray.getJSONObject(0).getString("id");
@@ -307,7 +309,7 @@ public class YIRTestCase {
     @Test(priority = 18)
     public void test_S14_01_TopArtists() throws InterruptedException {
         System.out.println("\nCase 19: S14.0.1 Top Artists");
-
+        helper.goNextFrame(11);
         List<String> topArtistsNamesListFromJson = new ArrayList<>();
         // Loop through each artist JSON object in the JSONArray and extract the ID
         for (int i = 0; i < JasonExtraction.topArtistsArray.length(); i++) {
