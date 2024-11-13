@@ -45,7 +45,7 @@ public class SilenceDetector {
     }
 
     public static void main(String[] args) throws IOException {
-        String filePath = "/Users/marxyang/Desktop/iOS_AUDIO_10_28.m4a";
+        String filePath = "/Users/marxyang/Desktop/PERFORMANCE_TEST/C_Android/Wifi_C.mp4";
         detectSilenceInMp4(filePath);
     }
 

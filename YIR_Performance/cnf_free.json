@@ -18,15 +18,15 @@
       "distinctCount": 26
     },
     "alexa": {
-      "totalMinutes": 35
+      "totalMinutes": 60
     }
   },
   "topTracks": [
     {
-      "id": "B07ZFW4HV3",
+      "id": "B0BS2S4WXN",
       "count": 13,
       "minutes": 28,
-      "countPercentile": 8,
+      "countPercentile": 38,
       "playDays": 8
     },
     {
@@ -121,10 +121,10 @@
   ],
   "topArtists": [
     {
-      "id": "B0011YYROE",
+      "id": "B00157GJ20",
       "count": 41,
       "minutes": 138,
-      "minutesPercentile": 4,
+      "minutesPercentile": 43,
       "tracks": [
         {
           "id": "B0CJGXP2HC",
@@ -149,10 +149,10 @@
       ]
     },
     {
-      "id": "B003AM1Q94",
+      "id": "B06WP75FR9",
       "count": 25,
       "minutes": 74,
-      "minutesPercentile": 5,
+      "minutesPercentile": 51,
       "tracks": [
         {
           "id": "B0C9FZ6JQH",
@@ -173,10 +173,10 @@
       ]
     },
     {
-      "id": "B0CVNC7G8G",
+      "id": "B00137NS0S",
       "count": 21,
       "minutes": 51,
-      "minutesPercentile": 3,
+      "minutesPercentile": 63,
       "tracks": [
         {
           "id": "B0BS2S4WXN",
@@ -394,15 +394,48 @@
   "topAlexaRequests": [
     {
       "id": "B000QKO05A",
-      "count": 1,
+      "count": 7,
       "minutes": 8,
       "entityType": "ARTIST"
     }
   ],
-  "topNewArtistDiscovery": [],
-  "topEarlyAlbumDiscovery": [],
+  "topNewArtistDiscovery": [
+    {
+      "id": "B001LYTVPE",
+      "minutes": 5167.0,
+      "timestamp": "1704067200",
+      "tracks": [
+        {
+          "id": "B0C2ZCHB4M",
+          "count": 13
+        },
+        {
+          "id": "B0C2ZDQ3ZQ",
+          "count": 13
+        },
+        {
+          "id": "B0C2ZF4H8S",
+          "count": 13
+        }
+      ]
+    }
+  ],
+  "topEarlyAlbumDiscovery": [
+    {
+      "id": "B0CZ889KN2",
+      "minutes": 44,
+      "count": 12,
+      "rank": 258873.0,
+      "tracks": [
+        {
+          "id": "B0CZ86YQSX",
+          "count": 12
+        }
+      ]
+    }
+  ],
   "firstHalf": {
-    "count": 1,
+    "count": 9,
     "peakMonth": 1,
     "peakMonthPlays": 1,
     "topTrack": "B002PAVWQO"
@@ -417,25 +450,25 @@
     {
       "id": "8fa203db-927f-4c3b-82a2-9fe844609a4e",
       "count": 6,
-      "minutes": 742,
-      "minutesPercentile": 7
+      "minutes": 60,
+      "minutesPercentile": 37
     },
     {
       "id": "447b0886-c4bc-479b-8f01-60a5887bfc3a",
       "count": 9,
-      "minutes": 343,
-      "minutesPercentile": 1
+      "minutes": 50,
+      "minutesPercentile": 11
     },
     {
       "id": "90c65aee-3db8-4bd1-bf28-42a85342bfe7",
       "count": 5,
-      "minutes": 295,
+      "minutes": 40,
       "minutesPercentile": 44
     },
     {
       "id": "af5c50e3-f556-46b2-b9ab-42650825f4db",
       "count": 4,
-      "minutes": 125,
+      "minutes": 30,
       "minutesPercentile": 28
     },
     {

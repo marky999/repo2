@@ -41,7 +41,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 1: Share Card from Decades'");
 
-        helper.goNextFrame(2);
+   //     helper.goNextFrame(2);
         helper.openShareCard("testOpenCloseShareCardFromDecade");
     }
 
@@ -50,7 +50,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 2: Share Card from Genres'");
 
-        helper.goNextFrame(3);
+ //       helper.goNextFrame(3);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         List<String> topGenresFromJSon = JasonExtraction.getTopGenres();
         String firstGenre = topGenresFromJSon.get(0);
@@ -63,7 +63,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 3:Open Close Share Card  from Later You Were");
 
-        helper.goNextFrame(4);
+  //      helper.goNextFrame(4);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
@@ -76,7 +76,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 4:Open Close Share Card  from Your Top Song");
 
-        helper.goNextFrame(5);
+ //       helper.goNextFrame(5);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
         helper.openShareCard("testOpenCloseShareCardYourTopSong");
@@ -87,7 +87,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 5:Open Close Share Card  from Big Fan Top Song Rare card");
 
-        helper.goNextFrame(6);
+  //      helper.goNextFrame(6);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
         helper.openShareCard("testOpenCloseShareCardBigFanTopSong");
@@ -98,7 +98,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 6:Open Close Share Card  from Top Play Lists");
 
-        helper.goNextFrame(8);
+   //     helper.goNextFrame(8);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
         helper.openShareCard("testOpenCloseShareCardTopPlayList");
@@ -109,7 +109,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 7:Open Close Share Card  from Your Top Artist");
 
-        helper.goNextFrame(9);
+ //       helper.goNextFrame(9);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
         helper.openShareCard("testOpenCloseShareCardYourTopArtist");
@@ -120,7 +120,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 8:Open Close Share Card  from Top Artists");
 
-        helper.goNextFrame(11);
+  //      helper.goNextFrame(11);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         WebElement elem = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
         if(Objects.equals(elem.getAttribute("label"), "share")){
@@ -137,7 +137,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 9:Open Close Share Card  from Early Listener");
 
-        helper.goNextFrame(13);
+ //       helper.goNextFrame(13);
         Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         WebElement elem = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
@@ -149,7 +149,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 10:Open Close Share Card  from Top Discovery");
 
-        helper.goNextFrame(14);
+//        helper.goNextFrame(14);
         Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         WebElement elem = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
@@ -161,7 +161,7 @@ public class YIRShareOpecCloseTest {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 11:Open Close Share Card  from Alexa");
 
-        helper.goNextFrame(15);
+  //      helper.goNextFrame(15);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         WebElement elem = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));
         helper.openShareCard("testOpenCloseShareCardAlexa");
@@ -171,7 +171,7 @@ public class YIRShareOpecCloseTest {
     public void testOpenCloseShareCardFromTheRest() throws InterruptedException {
         System.out.println("\n====================================================================================");
         System.out.println("\nCase 12:Open Close Share Card  from the rest");
-        helper.goNextFrame(16);
+ //       helper.goNextFrame(16);
         Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40)); // 10 seconds max wait
         WebElement elem = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ActionButton_View")));

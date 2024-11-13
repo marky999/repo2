@@ -37,7 +37,7 @@ public class ValidateEachFrame {
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//XCUIElementTypeStaticText[@name=\"First you were obsessed with \"]")));
             return true;
         }catch(TimeoutException e){
-            helper.captureScreenshot("screenshots/error_firstHalf.png");
+            helper.captureScreenshot(driver,"screenshots/error_firstHalf.png");
             return false;
         }
     }
@@ -83,13 +83,13 @@ public class ValidateEachFrame {
                 i++;
                 if(i>= elements.size())
                 {
-                    helper.captureScreenshot("screenshots/error_stringNotFound.png");
+                    helper.captureScreenshot(driver,"screenshots/error_stringNotFound.png");
                     return false;
                 }
             }
 
         } catch (Exception e) {
-            helper.captureScreenshot("screenshots/error_stringNotFound.png");
+            helper.captureScreenshot(driver, "screenshots/error_stringNotFound.png");
         }
         return false;
     }
@@ -101,14 +101,14 @@ public class ValidateEachFrame {
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(String.format("//*[@name='%s']", lastGenre))));
 
         try {
-                //WebElement element = driver.findElement(By.xpath(String.format("//*[@name='%s']", lastGenre)));
                 System.out.println("'Top Genre' frame appeared.");
                 List<WebElement> elements = driver.findElements(By.xpath("//XCUIElementTypeStaticText"));
+                //System.out.println("elements.size() = " + elements.size());
                 for (int i = 10; i < elements.size(); i++) {
                     genreArray.add(elements.get(i).getText());
                 }
         } catch (Exception e ) {
-            helper.captureScreenshot("screenshots/error_getTopGenres.png");
+            helper.captureScreenshot(driver, "screenshots/error_getTopGenres.png");
             System.out.println("Page NOT displayed\n");
         }
         return genreArray;
@@ -122,10 +122,25 @@ public class ValidateEachFrame {
                 artistsArray.add(elements.get(i).getText());
             }
         } catch (Exception e ) {
-            helper.captureScreenshot("screenshots/error_getTopArtists.png");
+            helper.captureScreenshot(driver, "screenshots/error_getTopArtists.png");
             System.out.println("Artists  NOT displayed fully\n");
         }
-        return artistsArray;
+        return artistsArray.size() > 5 ? artistsArray.subList(0, Math.max(5, artistsArray.size() - 2)) : artistsArray;
+    }
+
+    public List<String> getTopPodcasts()  {
+        List<String> artistsArray = new ArrayList<>();
+        try {
+            List<WebElement> elements = driver.findElements(By.xpath("//XCUIElementTypeStaticText"));
+            for (int i = 15; i < elements.size(); i++) {
+                artistsArray.add(elements.get(i).getText());
+            }
+        } catch (Exception e ) {
+            helper.captureScreenshot(driver, "screenshots/error_getTopArtists.png");
+            System.out.println("Artists  NOT displayed fully\n");
+        }
+        return artistsArray.size() > 5 ? artistsArray.subList(0, Math.max(5, artistsArray.size() - 2)) : artistsArray;
+
     }
     public boolean isFirstPageDisplayed() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // 10 seconds max wait
@@ -190,13 +205,11 @@ public class ValidateEachFrame {
                 System.out.println("Target count reached: " + count);
                 return elements.size();
             }
-
             // Pause briefly
             Thread.sleep(1000);
-
-            // If the loop exits due to timeout, log a message
-            System.out.println("Timeout reached. Target count not met.");
         }
+        // If the loop exits due to timeout, log a message
+        System.out.println("Timeout reached. Target count not met.");
         return count;
     }
 }

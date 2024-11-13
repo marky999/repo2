@@ -1,8 +1,6 @@
 package org.example;
 
 import io.appium.java_client.AppiumDriver;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.PointerInput;
@@ -27,6 +25,7 @@ public class Helper {
     public final String shareSheet_cancelButton =  "//*[@name=\"IconButton,ShareSheet_CancelButton\"]" ;
     public final String cancelButton = "//XCUIElementTypeButton[@name=\"\u200ECancel\"]";
     public final String weFound_xpath = "//XCUIElementTypeStaticText[@name=\"We spent \"]";
+
 
     public Helper(AppiumDriver driver, WebDriverWait wait){
         this.driver = driver;
@@ -132,19 +131,20 @@ public class Helper {
     }
 
     public boolean isElementExist(By xpath) {
-        try {
-            if (driver.findElement(xpath).isDisplayed()) {
-                return true;
-            }
-        } catch (NoSuchElementException e) {
-            System.out.println("element not found");
-            return false;
-        }
-        return false;
+//        try {
+//            if (!driver.findElements(xpath).isEmpty()) {
+//                return true;
+//            }
+//        } catch (NoSuchElementException e) {
+//            System.out.println("element not found");
+//            return false;
+//        }
+//        return false;
+        return !driver.findElements(xpath).isEmpty();
     }
 
 
-    public void captureScreenshot(String filePath) {
+    public String captureScreenshot(AppiumDriver driver, String filePath) {
         File screenshotDirectory = new File(filePath).getParentFile();
         if (!screenshotDirectory.exists()) {
             screenshotDirectory.mkdirs(); // Create directories
@@ -161,6 +161,8 @@ public class Helper {
         } catch (IOException e) {
             System.out.println("Error saving screenshot: " + e.getMessage());
         }
+
+        return filePath;
     }
 
 
@@ -177,13 +179,28 @@ public class Helper {
         // Perform the action
         System.out.println("Go to Previous Page");
         driver.perform(Collections.singletonList(tap));
-        Thread.sleep(2000);
+        Thread.sleep(2500);
     }
 
+
+    public boolean goNextFrame(String  xpath) throws InterruptedException {
+        int i = 0;
+        while (!isElementExist(By.xpath(xpath))) {
+            driver.findElement(By.xpath("//*[@name=\"Recap_LeftRightTapHandler_TouchableOpacityRight\"]")).click();
+            //System.out.println("Go next frame");
+            Thread.sleep(2000);//Do not remove
+            if(i++ > 16){
+                System.out.println("Frame Not found");
+                return false;
+            }
+        }
+        System.out.println("Found the frame");
+        return true;
+    }
     public void goNextFrame(int n) throws InterruptedException {
        for(int i = 0; i < n; i++){
            driver.findElement(By.xpath("//*[@name=\"Recap_LeftRightTapHandler_TouchableOpacityRight\"]")).click();
-           Thread.sleep(100);
+           Thread.sleep(1000);
        }
     }
 
@@ -203,11 +220,11 @@ public class Helper {
     public void openAndCloseShareButtons() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // 10 seconds max wait
         List<String> buttonIds = Arrays.asList(
-                "IconButton,ShareSheet_Instagram"//,
-              //  "IconButton,ShareSheet_Facebook"//,
-               // "IconButton,ShareSheet_Snapchat",
-//                "IconButton,ShareSheet_WhatsApp",
-//                "IconButton,ShareSheet_Messages"
+                "IconButton,ShareSheet_Instagram",
+                "IconButton,ShareSheet_Facebook",
+                "IconButton,ShareSheet_Snapchat",
+                "IconButton,ShareSheet_WhatsApp",
+                "IconButton,ShareSheet_Messages"
         );
 
         for (String buttonId : buttonIds) {
@@ -216,7 +233,7 @@ public class Helper {
             // Add a delay before the next action
             Thread.sleep(3000); // Adjust as needed
             System.out.println("Open Share buttons: " + buttonId);
-            captureScreenshot("screenshots/" + buttonId.split("_")[1] + "_screenshot.png");
+            captureScreenshot(driver, "screenshots/" + buttonId.split("_")[1] + "_screenshot.png");
 
             switch (buttonId) {
                 case "IconButton,ShareSheet_Instagram":
@@ -285,6 +302,6 @@ public class Helper {
         } else {
             System.out.println("Some buttons are missing.");
         }
-        captureScreenshot("screenshots/" + caseName + ".png");
+        captureScreenshot(driver, "screenshots/" + caseName + ".png");
     }
 }

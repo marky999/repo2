@@ -20,52 +20,50 @@ public class JasonExtraction {
     public static final Map<String, String> artistMap = new HashMap<>();
     public static final Map<String, String> topGenreMap = new HashMap<>();
     public static final Map<String, String> songsMap = new HashMap<>();
-
-    static  {
-        // Initializing the HashMap with some sample data
-        artistMap.put("B00157GJ20", "Swift Taylor");
-        artistMap.put("B00GB0QTOY", "The Beatles");
-        artistMap.put("B002F0BWIM", "Justin Bieber");
-        artistMap.put("B000QJKJYM", "Tracy Chapman");
-        artistMap.put("B0015H24HO", "Ed Sheeran");
-        artistMap.put("B000QJJOTI", "Neil Young");
-        artistMap.put("B000QJPXG6", "Beastie Boys");
-        artistMap.put("B000QJNL2Y", "Pitbull");
-        artistMap.put("B000QJO20O", "Nas");
-        artistMap.put("B00GGOQNTG", "The Cool Kids");
+    public static final Map<String, String> topPodcastsMap = new HashMap<>();
+    public static final Map<String, String> topEarlyAlbumDiscoveryMap = new HashMap<>();
 
 
-        // Initializing the HashMap with some sample data
-        topGenreMap.put("dpRWm1xb", "Dance & Electronic");
-        topGenreMap.put("za-1TQ7u", "Rap & Hip Hop");
-        topGenreMap.put("aFyug8oD", "Pop");
-        topGenreMap.put("cwCUrJOR", "Dance Pop");
-        topGenreMap.put("_YBW-yD-", "Alternative");
+    static {
+    try {
+        String content = new String(Files.readAllBytes(Paths.get("data.json")));
+        JSONObject jsonObject = new JSONObject(content);
 
-        // Initializing the HashMap with some sample data
-        songsMap.put("B004LQW0NO", "Somebody To Love Remix [feat. USHER]");
-        songsMap.put("B01LXAA72R", "Die For You");
-        songsMap.put("B077TD3696", "Perfect Duet (with Beyoncé)");
-        songsMap.put("B08W8ZFD22", "Love Story (Taylor’s Version)");
-        songsMap.put("B09DK3PYJD", "Until I Found You");
-        songsMap.put("B0C6WQRDGQ", "Enchanted (Taylor's Version)");
-        songsMap.put("B0011Z4Z3G", "Fast Car");
-        songsMap.put("B07SYZKYSW", "Lover");
-        songsMap.put("B09WTMMYTS", "Love Of My Life");
-        songsMap.put("B0CJ3S5PDW", "Snooze (Acoustic) [Explicit]");
-        songsMap.put("B0BRYG3YQJ", "REACT");
-        songsMap.put("B00DFQDOW2", "N.Y. State of Mind [Explicit]");
-        songsMap.put("B07HKT8DL5", "Wu Tang Forever [feat. Ghostface Killah & Raekwon & RZA & Method Man & Inspectah Deck & Cappadonna & Jackpot Scotty Wotty & U-God & Masta Killa & GZA] [Explicit]");
-        songsMap.put("B0CPJCPDH4", "Fire!");
-        songsMap.put("B0D3WLP4XN", "OK [Explicit]");
-        songsMap.put("B001NB4W4A", "(Coffee's For Closers) (Album Version) ");
-        songsMap.put("B00C7D3VT0", "The Mighty Fall [feat. Big Sean] [Explicit]");
-        songsMap.put("B07WDNL1DV", "IHOP");
-        songsMap.put("B07WDNL8BK", "Jose & Mark");
-        songsMap.put("B097Q8DRW8", "Affirmative Action [Explicit] ");
+        // Populate artistMap
+        JSONObject artistJson = jsonObject.getJSONObject("artistMap");
+        for (String key : artistJson.keySet()) {
+            artistMap.put(key, artistJson.getString(key));
+        }
+
+        // Populate topGenreMap
+        JSONObject genreJson = jsonObject.getJSONObject("topGenreMap");
+        for (String key : genreJson.keySet()) {
+            topGenreMap.put(key, genreJson.getString(key));
+        }
+
+        // Populate songsMap
+        JSONObject songsJson = jsonObject.getJSONObject("songsMap");
+        for (String key : songsJson.keySet()) {
+            songsMap.put(key, songsJson.getString(key));
+        }
+
+        //populate topEarlyAlbumDiscoveryMap
+        JSONObject topEarlyAlbumJson = jsonObject.getJSONObject("topEarlyAlbumDiscoveryMap");
+        for (String key : topEarlyAlbumJson.keySet()) {
+            topEarlyAlbumDiscoveryMap.put(key, topEarlyAlbumJson.getString(key));
+        }
+
+        JSONObject topPodcastsJson = jsonObject.getJSONObject("topPodcastsMap");
+        for (String key : topPodcastsJson.keySet()) {
+            topPodcastsMap.put(key, topPodcastsJson.getString(key));
+        }
+
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+}
 
-    static String filePath = "cnf_prime.json";
+    static String filePath = Config.JSON_FILE_PATH;
     static String jsonString;
 
     // Initialize JSON arrays
@@ -73,7 +71,12 @@ public class JasonExtraction {
     static JSONArray topGenresArray;
     static JSONArray topArtistsArray;
     static JSONArray topTracksArray;
+    static JSONArray topNewArtistDiscoveryArray;
+    static JSONArray topAlexaRequestsArray;
+    static JSONArray topPodcastsArray;
+    static JSONArray topEarlyAlbumDiscoveryArray;
 
+    static JSONObject totalStatsObject;
     static JSONObject firstHalfObject;
     static JSONObject secondHalfObject;
     static {
@@ -83,11 +86,15 @@ public class JasonExtraction {
             topDecadesArray = jsonObject.getJSONArray("topDecades");
             topGenresArray = jsonObject.getJSONArray("topGenres");
             topTracksArray = jsonObject.getJSONArray("topTracks");
+            topArtistsArray =  jsonObject.getJSONArray("topArtists");
+            topNewArtistDiscoveryArray = jsonObject.getJSONArray("topNewArtistDiscovery");
+            topAlexaRequestsArray = jsonObject.getJSONArray("topAlexaRequests");
+            topPodcastsArray = jsonObject.getJSONArray("topPodcasts");
+            topEarlyAlbumDiscoveryArray = jsonObject.getJSONArray("topEarlyAlbumDiscovery");
+
             firstHalfObject = jsonObject.getJSONObject("firstHalf");
             secondHalfObject = jsonObject.getJSONObject("secondHalf");
-            topArtistsArray =  jsonObject.getJSONArray("topArtists");
-
-
+            totalStatsObject = jsonObject.getJSONObject("totalStats");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -96,7 +103,6 @@ public class JasonExtraction {
 
     static class TopArtist {
         private String id;
-
         public String getId() {
             return id;
         }
@@ -104,7 +110,6 @@ public class JasonExtraction {
 
     static class TopTrack {
         private String id;
-
         public String getId() {
             return id;
         }
@@ -112,7 +117,6 @@ public class JasonExtraction {
 
     public static class TracksStats {
         private  int totalMinutes;
-
         public  int getTotalMinutes() {
             return totalMinutes;
         }
@@ -120,11 +124,9 @@ public class JasonExtraction {
 
     public static class ArtistsStats {
         private final int distinctCount;
-
         public ArtistsStats(int distinctCount) {
             this.distinctCount = distinctCount;
         }
-
         public  int getDistinctCount() {
             return distinctCount;
         }
@@ -161,12 +163,10 @@ public class JasonExtraction {
     }
 
     public static HashMap<String, Object> getFirstHalf(){
-        //HashMap<String, String> map = new HashMap<>();
         return jsonToMap(firstHalfObject);
     }
 
     public static HashMap<String, Object> getSecondHalf(){
-        //HashMap<String, String> map = new HashMap<>();
         return jsonToMap(secondHalfObject);
     }
 
@@ -259,7 +259,7 @@ public class JasonExtraction {
         Gson gson = new GsonBuilder().create();
         try {
             // Change this path to your actual JSON file path
-            FileReader reader = new FileReader("cnf_prime.json");
+            FileReader reader = new FileReader(Config.JSON_FILE_PATH);
             Type dataType = new TypeToken<Data>() {}.getType();
             Data data = gson.fromJson(reader, dataType);
 
@@ -270,21 +270,21 @@ public class JasonExtraction {
             }
 
             // Print out total minutes from totalStats/tracks
-            System.out.println("\nTotal Minutes this year:");
-            System.out.println("Total Minutes: " + data.getTotalStats().getTracks().getTotalMinutes());
+//            System.out.println("\nTotal Minutes this year:");
+//            System.out.println("Total Minutes: " + data.getTotalStats().getTracks().getTotalMinutes());
 
             //Print top Decade
-            String topDecadesId = topDecadesArray.getJSONObject(0).getString("id");
-            System.out.println("\nTop Decades : " + topDecadesId);
-            JSONArray topDecadesTracks = topDecadesArray.getJSONObject(0).getJSONArray("tracks");
-            System.out.println("There are " + topDecadesTracks.length() + " tracks in Decades");
-            for(Object obj : topDecadesTracks){
-                JSONObject track = (JSONObject) obj;
-                // Access individual fields within each track object
-                String id = track.getString("id");
-                int count = track.getInt("count");
-                System.out.println("Track ID: " + id);//
-            }
+//            String topDecadesId = topDecadesArray.getJSONObject(0).getString("id");
+//            System.out.println("\nTop Decades : " + topDecadesId);
+//            JSONArray topDecadesTracks = topDecadesArray.getJSONObject(0).getJSONArray("tracks");
+//            System.out.println("There are " + topDecadesTracks.length() + " tracks in Decades");
+//            for(Object obj : topDecadesTracks){
+//                JSONObject track = (JSONObject) obj;
+//                // Access individual fields within each track object
+//                String id = track.getString("id");
+//                int count = track.getInt("count");
+//                System.out.println("Track ID: " + id);//
+//            }
 
             //-----------Print out top Genres-------------------------------------------//
             System.out.println("\nTop Genres:");
@@ -320,8 +320,10 @@ public class JasonExtraction {
             HashMap<String, Object> topArtistFromJSon = jsonArrayToMap(topArtistsArray);
             dumpHashMap(topArtistFromJSon);
 
-
-
+            //------------- Dump topAPodcasts ------------//
+            System.out.println("\ntopPodcasts");
+            HashMap<String, Object> topPodcastsFromJSon = jsonArrayToMap(topPodcastsArray);
+            dumpHashMap(topPodcastsFromJSon);
 
 
         } catch (IOException e) {
