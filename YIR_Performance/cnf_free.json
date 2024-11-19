@@ -23,10 +23,10 @@
   },
   "topTracks": [
     {
-      "id": "B0BS2S4WXN",
+      "id": "B07ZFW4HV3",
       "count": 13,
       "minutes": 28,
-      "countPercentile": 38,
+      "countPercentile": 8,
       "playDays": 8
     },
     {
@@ -124,7 +124,7 @@
       "id": "B00157GJ20",
       "count": 41,
       "minutes": 138,
-      "minutesPercentile": 43,
+      "minutesPercentile": 4,
       "tracks": [
         {
           "id": "B0CJGXP2HC",
@@ -450,8 +450,8 @@
     {
       "id": "8fa203db-927f-4c3b-82a2-9fe844609a4e",
       "count": 6,
-      "minutes": 60,
-      "minutesPercentile": 37
+      "minutes": 742,
+      "minutesPercentile": 7
     },
     {
       "id": "447b0886-c4bc-479b-8f01-60a5887bfc3a",

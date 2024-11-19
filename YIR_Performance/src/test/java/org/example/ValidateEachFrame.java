@@ -77,6 +77,7 @@ public class ValidateEachFrame {
             List<WebElement> elements = driver.findElements(By.xpath("//XCUIElementTypeStaticText"));
             int i = 0;
             while (true) {
+                System.out.println(Objects.requireNonNull(elements.get(i).getAttribute("label")));
                 if (Objects.requireNonNull(elements.get(i).getAttribute("label")).contains(str)) {
                     return true;
                 }
@@ -132,15 +133,15 @@ public class ValidateEachFrame {
         List<String> artistsArray = new ArrayList<>();
         try {
             List<WebElement> elements = driver.findElements(By.xpath("//XCUIElementTypeStaticText"));
-            for (int i = 15; i < elements.size(); i++) {
+            for (int i = 14; i < elements.size(); i++) {
                 artistsArray.add(elements.get(i).getText());
             }
         } catch (Exception e ) {
             helper.captureScreenshot(driver, "screenshots/error_getTopArtists.png");
             System.out.println("Artists  NOT displayed fully\n");
         }
-        return artistsArray.size() > 5 ? artistsArray.subList(0, Math.max(5, artistsArray.size() - 2)) : artistsArray;
-
+      //  return artistsArray.size() > 5 ? artistsArray.subList(0, Math.max(5, artistsArray.size() - 2)) : artistsArray;
+        return artistsArray;
     }
     public boolean isFirstPageDisplayed() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // 10 seconds max wait

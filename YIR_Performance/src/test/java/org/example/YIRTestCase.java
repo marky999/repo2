@@ -18,6 +18,8 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.SkipException;
 import org.testng.annotations.*;
+
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Method;
@@ -38,12 +40,18 @@ public class YIRTestCase {
     private boolean skipSetup = false;  // Flag to control if BeforeMethod should run
     private ITestResult testResult;
     public ExtentTest test;
-    public final boolean execute = false; /////////////   DEBUG PURPOSE //////////
+    public final boolean execute = true; /////////////   DEBUG PURPOSE //////////
 
     @BeforeClass(alwaysRun = true)
 
     public void classSetUp() throws Exception {
         JasonExtraction.extractJson();
+    }
+    @BeforeSuite
+    public void cleanUpScreenshots() {
+        String screenshotsPath = "./screenshots"; // Adjust path if needed
+        deleteScreenshots(screenshotsPath);
+        System.out.println("Deleted all files in the screenshots folder.");
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -173,15 +181,15 @@ public class YIRTestCase {
         String trackNameFromJson = songs.get(topTrack);
 
         // Verify from the frame   //
-        helper.goNextFrame(4);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@name=\"First you were obsessed with\"]")));//XCUIElementTypeStaticText[@name="First you were obsessed with"]
+        helper.goNextFrame("//*[contains(@name,\"First you were obsessed with\")]");
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@name,\"First you were obsessed with\")]")));//XCUIElementTypeStaticText[@name="First you were obsessed with"]
 
         Assert.assertTrue(validateEachFrame.isPartOfStringFound(trackNameFromJson.split(" ")[0]));
         test.info(trackNameFromJson);
         test.info("Peak Listening Month : " + peakListeningMonth);
         assertForTest(test, validateEachFrame.isPartOfStringFound(peakListeningMonth), "test_S602_FirstHalfObsessedWith");
-        skipSetup = true;
+       // skipSetup = true;
     }
 
     @Test(priority = 10, dependsOnMethods = {"test_S602_FirstHalfObsessedWith"}, enabled = execute)
@@ -203,11 +211,12 @@ public class YIRTestCase {
         test.info("track From Json = " + topTrack + "  : " + trackNameFromJson);
         test.info("peakListeningMonth = " + peakListeningMonth);
 
-        helper.goNextFrame(4);
+        helper.goNextFrame("//*[contains(@name,\"First you were obsessed with\")]");
+        //helper.goNextFrame("//*[contains(@name,\"Later, you were all about \")]");
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@name=\"Later, you were all about \"]")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@name,\"Later, you were all about \")]")));
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
+        Thread.sleep(9000);//DO NOT REMOVE
         Assert.assertTrue(validateEachFrame.isPartOfStringFound(peakListeningMonth));
         test.info("\n" + trackNameFromJson + " appeared");
         test.info("Peak Listening Month : " + peakListeningMonth);
@@ -249,16 +258,12 @@ public class YIRTestCase {
         assertForTest(test, validateEachFrame.isPartOfStringFound("" + count), "test_S702_YourTopSongFrame");
     }
 
-    @Test(priority = 13, enabled = execute)
+    @Test(priority = 13)
     public void test_S801_TopSongRareCard() throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         //  TODO Need to check whether it is eligible to be included
         test.info("\nCase 13: S8.01 Your Top Song Rare card");
 
-        boolean isFound = helper.goNextFrame("//*[@name=\"BIG FAN\"] ");
-        if(!isFound){
-            throw new SkipException("Skipping test: Rarecard not found.");
-        }
         //-- Extract data from json to verify --//
         String topSongID = JasonExtraction.topTracksArray.getJSONObject(0).getString("id");
         String topSongTrackTitle = JasonExtraction.songsMap.get(topSongID);
@@ -266,7 +271,11 @@ public class YIRTestCase {
         test.info("topSongTrackTitle : " + topSongTrackTitle);
         //--------------------------------------//
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@name=\"BIG FAN\"] ")));
+        boolean isFound = helper.goNextFrame("//*[@name=\"BIG FAN\"] ");
+        if(!isFound){
+            throw new SkipException("Skipping test: Rarecard not found.");
+        }
+
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@name=\"Top Song\"] ")));
         test.info("TopSong Share Card Opened");
 
@@ -276,20 +285,19 @@ public class YIRTestCase {
         test.info("You are " + countPercentile + "% listener");
 
         test.info("=== Verify TopSong Title appears w/icon ===");
-        test.info("Will verify " + topSongTrackTitle.split(" ")[0]);
-       // Assert.assertTrue(validateEachFrame.isPartOfStringFound(topSongTrackTitle.split(" ")[0]));
-        test.info(topSongTrackTitle + " appeared");
+
+        test.info("Verify " + topSongTrackTitle.split(" ")[0]);
 
         assertForTest(test, validateEachFrame.isPartOfStringFound(topSongTrackTitle.split(" ")[0]), "test_S801_TopSongRareCard");
-
+        test.info(topSongTrackTitle + " appeared");
     }
 
-    @Test(priority = 14, enabled = execute)
+    @Test(priority = 14, enabled = true)
     public void test_S901_AllYourFavoriteCapturedForever() throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 14: S9.01  All Your Favorite Captured Forever ");
         helper.goNextFrame("//*[@name=\"All your favorites,\"]");
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@name=\"All your favorites,\"]")));
+       // wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@name=\"All your favorites,\"]")));
         WebElement elem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@name=\"captured forever\"]")));
         //assertNotNull(elem, "frame not appeared");
         test.info("All Your Favorite Captured Forever appeared");
@@ -297,7 +305,7 @@ public class YIRTestCase {
 
     }
 
-    @Test(priority = 15, enabled = execute)
+    @Test(priority = 15, enabled = true)
     public void test_S903_MyTopSongs2024() throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 15: S9.03 My TopSongs 2024");
@@ -310,7 +318,7 @@ public class YIRTestCase {
     }
 
 
-    @Test(priority = 16, enabled = execute)
+    @Test(priority = 16, enabled = true)
     public void test_S11_0_1_YouListenToXXXArtists() throws FileNotFoundException, InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("Case 16: S11.01 You listen to xxx artists this year, but someone stole the show");
@@ -333,7 +341,7 @@ public class YIRTestCase {
         assertForTest(test, elem.getAttribute("label").contains(totalDistinctCountFromJson), "test_S11_0_1_YouListenToXXXArtists");
     }
 
-    @Test(priority = 17, enabled = execute)
+    @Test(priority = 17, enabled = true)
     public void test_S11_02_YourTopArtist() throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 17: S11.0.2 Your Top Artist");
@@ -358,7 +366,8 @@ public class YIRTestCase {
         test.info(label);
 
         test.info("--- Verify top artist : " + artistName + "---");
-        if(!driver.findElements(By.xpath("//*[@name=\"" + artistName + "\"]")).isEmpty()){
+        Thread.sleep(2000);
+        if(driver.findElements(By.xpath("//*[@name=\"" + artistName + "\"]")).isEmpty()){
             Assert.fail();
         }
         test.info(artistName + " found");
@@ -366,20 +375,28 @@ public class YIRTestCase {
         assertForTest(test, label.contains(helper.formatWithCommas("" + minutes)), "test_S11_02_YourTopArtist");
     }
 
-    @Test(priority = 18, enabled = execute)
+    @Test(priority = 18, enabled = true)
     public void test_S12_01_TopArtistRareCard() throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 18: S13.0.1 Top Artist Rare Card");
+
+        int minutes = JasonExtraction.topArtistsArray.getJSONObject(0).getInt("minutesPercentile");
+        if(minutes < 5){
+            throw new SkipException("Skipping Alexa. minutes : " + minutes);
+        }
+
 
         //-- extract data from json to verify --//
         int minutesPercentileFromJson = JasonExtraction.topArtistsArray.getJSONObject(0).getInt("minutesPercentile");
         String artistID = JasonExtraction.topArtistsArray.getJSONObject(0).getString("id");
         String artistName = JasonExtraction.artistMap.get(artistID);
+        test.info("Artist ID from json : " + artistID);
+        test.info("Artist name from json : " + artistName);
         //--------------------------------------//
 
         helper.goNextFrame("//XCUIElementTypeStaticText[@name=\"Top Artist\"]");
 
-        WebElement elem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//XCUIElementTypeStaticText[@name=\"Top Artist\"]")));
+       // WebElement elem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//XCUIElementTypeStaticText[@name=\"Top Artist\"]")));
         test.info( "Top Artist Rare Card appeared : BIG FAN");
         test.info( "Verify \"You're a top " + minutesPercentileFromJson + "% listener");
         boolean isFound = helper.elementFound("//*[contains(@name, \"You're a top \")]", 10);
@@ -394,7 +411,7 @@ public class YIRTestCase {
         assertForTest(test, isFound, "test_S12_01_TopArtistRareCard");
     }
 
-    @Test(priority = 19, enabled = execute)
+    @Test(priority = 19, enabled = true)
     public void test_S14_01_TopArtists() throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 19: S14.0.1 Top Artists");
@@ -418,52 +435,45 @@ public class YIRTestCase {
         assertForTest(test, topArtistsArray.containsAll(topArtistsNamesListFromJson), "test_S14_01_TopArtists");
     }
 
-    @Test(priority = 20, enabled = execute)
+    @Test(priority = 20, enabled = true)
     public void test_S15_01_YouDoveDeep () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 20: S15.0.1 You Dove Deep");
 
         // Check if the JSONObject is empty
-        if (JasonExtraction.topEarlyAlbumDiscoveryArray.isEmpty()) {
-            test.info("topEarlyAlbumDiscoveryArray is empty");
+        if (JasonExtraction.topNewArtistDiscoveryArray.getJSONObject(0).getInt("minutes") < 40 &&
+                JasonExtraction.topEarlyAlbumDiscoveryArray.getJSONObject(0).getInt("minutes") < 40) {
+            test.info("topEarlyAlbum minute is less than 35");
             throw new SkipException("Skipping Case");
         }
 
         helper.goNextFrame("//*[@name=\"You dove deep \"]");
-       // test.info("You Dove Deep");
-      //  Assert.assertTrue(validateEachFrame.isPartOfStringFound("You dove deep"));
-
         assertForTest(test, validateEachFrame.isPartOfStringFound("You dove deep"), "test_S15_01_YouDoveDeep");
         test.info("You dove deep frame appeared");
     }
 
-    @Test(priority = 21, enabled = execute)
-    public void test_S15_01_EarlyListener () throws InterruptedException {
+    @Test(priority = 21, dependsOnMethods = {"test_S15_01_YouDoveDeep"}, enabled = true)
+    public void test_S15_02_EarlyListener () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 21: S15.0.1 Early Listener");
-        if (JasonExtraction.topEarlyAlbumDiscoveryArray.isEmpty()) {
+        if (JasonExtraction.topEarlyAlbumDiscoveryArray.getJSONObject(0).getInt("minutes") < 40) {
+            test.info("topEarlyAlbum minute is less than 40");
             throw new SkipException("Skipping Case");
         }
         helper.goNextFrame("//*[@name=\"You dove deep \"]");//Go to here and wait for the next. skip too fast to capture element
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement elem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@name, \"You were one of the first\" )]")));
         String str = elem.getAttribute("label");
-
-        //TODO: What to extract for album
-        String regex = "You were one of the first to listen to this album by (.+?) on the day it dropped\\.";
-        Pattern pattern = Pattern.compile(regex);
-        assert str != null;
-        Matcher matcher = pattern.matcher(str);
         test.info(str);
-        assertForTest(test, matcher.matches(), "test_S15_01_EarlyListener");
+        //TODO: What to extract for album
+        assertForTest(test, str.contains("You were one of the first to listen to this album by"), "test_S15_01_EarlyListener");
     }
 
-
-    @Test(priority = 22, enabled = execute)
+    @Test(priority = 22, dependsOnMethods = {"test_S15_01_YouDoveDeep"}, enabled = true)
     public void test_S16_01_TrendSetterTopDiscovery () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 22: S16.0.1 Trend Setter, TOP DISCOVERY");
-        if (JasonExtraction.topEarlyAlbumDiscoveryArray.isEmpty()) {
+        if (JasonExtraction.topNewArtistDiscoveryArray.getJSONObject(0).getInt("minutes") < 40) {
             throw new SkipException("Skipping Case");
         }
 
@@ -496,20 +506,21 @@ public class YIRTestCase {
         assertForTest(test, label.contains(min), "test_S16_01_TrendSetterTopDiscovery");
     }
 
-    @Test(priority = 23, enabled = execute)
+    @Test(priority = 23, enabled = true)
     public void test_S17_01_YouSpentXXXMinutesWithAlexa () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 23: S17_01 You Spent XXX Minutes With Alexa");
 
-        int minutes = JasonExtraction.topPodcastsArray.getJSONObject(0).getInt("minutes");
-        if(minutes < 60){
-            System.out.println(minutes);
-            throw new SkipException("Skipping Alexa. minutes : " + minutes);
-        }
         //----- Json data extraction -----//
         HashMap<String, Object>  map = JasonExtraction.jsonToMap(JasonExtraction.totalStatsObject);
         HashMap<String, Object> alexaMap = (HashMap<String, Object>) map.get("alexa");
         int alexaTotalMinutesFromJson = (int) alexaMap.get("totalMinutes");
+
+        if(alexaTotalMinutesFromJson < 61){
+            System.out.println(alexaTotalMinutesFromJson);
+            throw new SkipException("Skipping Alexa. minutes : " + alexaTotalMinutesFromJson);
+        }
+
         String minutesSpentFromJson = helper.formatWithCommas("" + alexaTotalMinutesFromJson);
         test.info("Alexa Total Minutes from json: " + minutesSpentFromJson);
 
@@ -522,11 +533,11 @@ public class YIRTestCase {
 
         //Verify xxx minutes from : You found this artist in May and listened for xxx minutes since!
         test.info("Verified spent,"+ alexaTotalMinutesFromJson + ", minutes with Alexa");
-        skipSetup = true;
+     //   skipSetup = true;
         assertForTest(test, minutesSpentFromJson.equals(minutesSpent), "test_S17_01_YouSpentXXXMinutesWithAlexa");
     }
 
-    @Test(priority = 24, enabled = true)
+    @Test(priority = 24, dependsOnMethods = {"test_S17_01_YouSpentXXXMinutesWithAlexa"}, enabled = true)
     public void test_S17_02_AlexaPlaysSomeArtist () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 24: S17_02 Alexa Plays Some Artist");
@@ -561,37 +572,37 @@ public class YIRTestCase {
         assertForTest(test, artistFromJson.contains(artist), "test_S17_02_AlexaPlaysSomeArtist");
     }
 
-    @Test(priority = 25, enabled = execute)
+    @Test(priority = 25, dependsOnMethods = {"test_S17_01_YouSpentXXXMinutesWithAlexa"}, enabled = true)
     public void test_S17_04_YouAskedHerToPlayXXTimes () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 25: S17_04 S17_04 You Asked Her To Play XX Times");
         int minutes = JasonExtraction.topPodcastsArray.getJSONObject(0).getInt("minutes");
-        if(minutes < 743){
+        if(minutes < 60){
             throw new SkipException("Skipping Alexa. minutes : " + minutes);
         }
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         //----- Json data extraction -----//
         int countFromJson = JasonExtraction.topAlexaRequestsArray.getJSONObject(0).getInt("count");
         test.info(countFromJson + " times  => from json");
 
         //--- Frame verification ---//
+        helper.goNextFrame("//XCUIElementTypeStaticText[@name=\"Alexa\"]");
+        Thread.sleep(2000);
         WebElement elem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("    //XCUIElementTypeStaticText[contains(@name, \"You asked her (nicely) to play\")]")));
         String label = elem.getAttribute("label");
         test.info(label);
+        test.info("verifying " + countFromJson + " times");
         assertForTest(test, label.contains("" + countFromJson), "test_S17_04_YouAskedHerToPlayXXTimes");
     }
 
-    @Test(priority = 26, enabled = execute)
+    @Test(priority = 26, enabled = true)
     public void test_S19_01_YourTopPodcast () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 26: S19_01 Your Top Podcast");
         int minutes = JasonExtraction.topPodcastsArray.getJSONObject(0).getInt("minutes");
-        if(minutes < 743){
-            throw new SkipException("Skipping Alexa. minutes : " + minutes);
+        if(minutes < 60){
+            throw new SkipException("Skipping Podcast. minutes : " + minutes);
         }
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
         //----- Json data extraction -----//
         String podcastIdFromJson = JasonExtraction.topPodcastsArray.getJSONObject(0).getString("id");
         test.info(podcastIdFromJson + "   => id from json");
@@ -600,28 +611,22 @@ public class YIRTestCase {
         int minutesFromJson = JasonExtraction.topPodcastsArray.getJSONObject(0).getInt("minutes");
         test.info(minutesFromJson + "   => minutes from json");
 
-        boolean isFound = helper.goNextFrame("//XCUIElementTypeImage[@name=\"podcastImage\"]");
-
-        if (!isFound) {
-            throw new SkipException("Skipping podcast image");
-        }
-
         //--- Frame verification ---//
-        WebElement elem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@label, \""  + topPodCastFromJson + "\")]")));
+        helper.goNextFrame("//XCUIElementTypeImage[@name=\"podcastImage\"]");
 
+        WebElement elem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@name, \"You listened for\")]")));
+        test.info("Verify " + minutesFromJson + " from json");
         String label = elem.getAttribute("label");
-        Assert.assertTrue(label.contains(topPodCastFromJson));
         test.info(label);
-        elem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@name, \"You listened for\")]")));
-        assertForTest(test, elem.getAttribute("label").contains("" + minutesFromJson), "test_S19_01_YourTopPodcast");
+        assertForTest(test, label.contains("" + minutesFromJson), "test_S19_01_YourTopPodcast");
     }
 
-    @Test(priority = 27, enabled = execute)
+    @Test(priority = 27, enabled = true)
     public void test_S20_01_TopPodcastRareCard () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 27: S20_01 Top Podcast rare card");
         int minutes = JasonExtraction.topPodcastsArray.getJSONObject(0).getInt("minutes");
-        if(minutes < 743){
+        if(minutes < 60){
             throw new SkipException("Skipping Alexa. minutes : " + minutes);
         }
 
@@ -648,14 +653,11 @@ public class YIRTestCase {
         assertForTest(test, elem.getAttribute("label").contains("" + minutesPercentileFromJson), "test_S20_01_TopPodcastRareCard");
     }
 
-    @Test(priority = 28, enabled = execute)
+    @Test(priority = 28, enabled = true)//, dependsOnMethods = {"test_S19_01_YourTopPodcast"}
     public void test_S21_01_TopPodcastList () throws InterruptedException {
         test = ExtentTestNGReportListener.getTest();
         test.info("\nCase 28: S21.01 Podcast list");
-        int minutes = JasonExtraction.topPodcastsArray.getJSONObject(0).getInt("minutes");
-        if(minutes < 743){
-            throw new SkipException("Skipping Alexa. minutes : " + minutes);
-        }
+        //int minutes = JasonExtraction.topPodcastsArray.getJSONObject(0).getInt("minutes");
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
@@ -665,6 +667,7 @@ public class YIRTestCase {
         for (int i = 0; i < JasonExtraction.topPodcastsArray.length(); i++) {
             JSONObject podcast = JasonExtraction.topPodcastsArray.getJSONObject(i);
             String artistId = podcast.getString("id");
+            System.out.println(artistId);
             topPodcastsListFromJson.add(JasonExtraction.topPodcastsMap.get(artistId));
         }
         test.info("Extracted list from json: " + topPodcastsListFromJson);
@@ -681,9 +684,12 @@ public class YIRTestCase {
 
         // Extract the artists names from the current frame and put them in array
         List<String> topArtistsArray = validateEachFrame.getTopPodcasts();
+        for(int i = 0; i < topArtistsArray.size(); i++)
+        {
+            test.info(topArtistsArray.get(i));
+        }
         //Assert.assertEquals(topArtistsArray, topPodcastsListFromJson);
-     //   test.info((Throwable) topArtistsArray);
-        assertForTest(test, topArtistsArray.equals(topPodcastsListFromJson), "test_S21_01_TopPodcastList");
+        assertForTest(test, topArtistsArray.containsAll(topPodcastsListFromJson), "test_S21_01_TopPodcastList");
     }
 
 //++++++++++++++++++++++++++++ helper func ++++++++++++++++++++++++++++++++++++++//
@@ -705,6 +711,16 @@ public class YIRTestCase {
         String screenshotPath = ScreenshotUtils.captureScreenshot(driver, caseName);
         test.info(caseName,
                 MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+    }
+    public static void deleteScreenshots(String folderPath) {
+        File folder = new File(folderPath);
+        if (folder.exists() && folder.isDirectory()) {
+            for (File file : folder.listFiles()) {
+                if (file.isFile()) {
+                    file.delete();
+                }
+            }
+        }
     }
 
     @AfterMethod

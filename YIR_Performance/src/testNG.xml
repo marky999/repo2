@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+        <listener class-name="org.example.ExtentTestNGReportListener" />
+    </listeners>
+
+    <test name="YIRTestCase">
+        <classes>
+            <class name="org.example.YIRTestCase" />
+        </classes>
+    </test>
+</suite>

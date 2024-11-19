@@ -1,0 +1,2369 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Nov 18, 2024 09:13:29 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S101_FirstPage</p>
+            <p class="text-sm">
+              <span>9:13:44 PM</span> / <span>00:00:01:517</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S101_FirstPage</h5>
+<span class='badge badge-success'>11.18.2024 9:13:44 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:13:45 PM</span>
+<span class='badge badge-default'>00:00:01:517</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:13:44 PM</td>
+        <td>
+          Starting test: S101 FirstPage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:13:45 PM</td>
+        <td>
+          test_S101_FirstPage
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S101_FirstPage1118091345.png' src="screenshots/test_S101_FirstPage1118091345.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:13:45 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S106_CountOfTracksIn2024Splash</p>
+            <p class="text-sm">
+              <span>9:14:05 PM</span> / <span>00:00:05:956</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S106_CountOfTracksIn2024Splash</h5>
+<span class='badge badge-success'>11.18.2024 9:14:05 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:14:11 PM</span>
+<span class='badge badge-default'>00:00:05:956</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:14:05 PM</td>
+        <td>
+          
+Case 2: S.1.06 Verify the track count appears in 2024 splash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:14:06 PM</td>
+        <td>
+          count = 6
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:14:06 PM</td>
+        <td>
+          Count Of Tracks In 2024: 6
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:14:11 PM</td>
+        <td>
+          test_S106_CountOfTracksIn2024Splash
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S106_CountOfTracksIn2024Splash1118091410.png' src="screenshots/test_S106_CountOfTracksIn2024Splash1118091410.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:14:11 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S201_WeSpentxxxMinutes</p>
+            <p class="text-sm">
+              <span>9:14:30 PM</span> / <span>00:00:14:616</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S201_WeSpentxxxMinutes</h5>
+<span class='badge badge-success'>11.18.2024 9:14:30 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:14:44 PM</span>
+<span class='badge badge-default'>00:00:14:616</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:14:30 PM</td>
+        <td>
+          
+Case 3: S2.01 We Spent xxx minutes
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:14:30 PM</td>
+        <td>
+          Total minutes from json: 1,433
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:14:43 PM</td>
+        <td>
+          We spent 1,433 minutes together this year
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:14:44 PM</td>
+        <td>
+          test_S201_WeSpentxxxMinutes
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S201_WeSpentxxxMinutes1118091444.png' src="screenshots/test_S201_WeSpentxxxMinutes1118091444.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:14:44 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S401_TopDecade</p>
+            <p class="text-sm">
+              <span>9:15:04 PM</span> / <span>00:00:09:116</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S401_TopDecade</h5>
+<span class='badge badge-success'>11.18.2024 9:15:04 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:15:13 PM</span>
+<span class='badge badge-default'>00:00:09:116</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:15:04 PM</td>
+        <td>
+          
+Case 4: S4.01 Top decade
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:15:12 PM</td>
+        <td>
+          Decade is 2020s
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:15:13 PM</td>
+        <td>
+          test_S401_TopDecade
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S401_TopDecade1118091512.png' src="screenshots/test_S401_TopDecade1118091512.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:15:13 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S501_ValidateThereWereSomeGenre</p>
+            <p class="text-sm">
+              <span>9:15:31 PM</span> / <span>00:00:08:177</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S501_ValidateThereWereSomeGenre</h5>
+<span class='badge badge-success'>11.18.2024 9:15:31 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:15:40 PM</span>
+<span class='badge badge-default'>00:00:08:177</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:15:31 PM</td>
+        <td>
+          
+Case 6: S5.01 Verify There were some genre...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:15:40 PM</td>
+        <td>
+          test_S501_ValidateThereWereSomeGenre
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S501_ValidateThereWereSomeGenre1118091539.png' src="screenshots/test_S501_ValidateThereWereSomeGenre1118091539.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:15:40 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S502_ValidateTopGenres</p>
+            <p class="text-sm">
+              <span>9:15:59 PM</span> / <span>00:00:19:286</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S502_ValidateTopGenres</h5>
+<span class='badge badge-success'>11.18.2024 9:15:59 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:16:18 PM</span>
+<span class='badge badge-default'>00:00:19:286</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:15:59 PM</td>
+        <td>
+          
+Case 7: S5.02 Verify Top 5 genres
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:15:59 PM</td>
+        <td>
+          topGenresFromJSon = [Pop, Teen Pop, Adult Contemporary, Alternative Pop, Singer Songwriter]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:16:18 PM</td>
+        <td>
+          topGenres from AM = [Pop, Teen Pop, Adult Contemporary, Alternative Pop, Singer Songwriter]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:16:18 PM</td>
+        <td>
+          test_S502_ValidateTopGenres
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S502_ValidateTopGenres1118091618.png' src="screenshots/test_S502_ValidateTopGenres1118091618.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:16:18 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S602_FirstHalfObsessedWith</p>
+            <p class="text-sm">
+              <span>9:16:37 PM</span> / <span>00:00:22:682</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S602_FirstHalfObsessedWith</h5>
+<span class='badge badge-success'>11.18.2024 9:16:37 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:17:00 PM</span>
+<span class='badge badge-default'>00:00:22:682</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:16:37 PM</td>
+        <td>
+          Case 9: S6.02 First Obsessed With
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:16:37 PM</td>
+        <td>
+          topTrack  from Json: B0CNQ8LRP8 : Por Dentro [Explicit]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:16:37 PM</td>
+        <td>
+          peakListeningMonth = April
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:16:59 PM</td>
+        <td>
+          Por Dentro [Explicit]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:16:59 PM</td>
+        <td>
+          Peak Listening Month : April
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:17:00 PM</td>
+        <td>
+          test_S602_FirstHalfObsessedWith
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S602_FirstHalfObsessedWith1118091700.png' src="screenshots/test_S602_FirstHalfObsessedWith1118091700.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:17:00 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S603_SecondHalfLaterYouAre</p>
+            <p class="text-sm">
+              <span>9:17:20 PM</span> / <span>00:00:30:425</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S603_SecondHalfLaterYouAre</h5>
+<span class='badge badge-success'>11.18.2024 9:17:20 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:17:50 PM</span>
+<span class='badge badge-default'>00:00:30:425</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:17:20 PM</td>
+        <td>
+          
+Case 10: S6.03  Later you were all about
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:17:20 PM</td>
+        <td>
+          track From Json = B01LXAA72R  : Die For You
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:17:20 PM</td>
+        <td>
+          peakListeningMonth = August
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:17:48 PM</td>
+        <td>
+          
+Die For You appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:17:48 PM</td>
+        <td>
+          Peak Listening Month : August
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:17:50 PM</td>
+        <td>
+          test_S603_SecondHalfLaterYouAre
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S603_SecondHalfLaterYouAre1118091750.png' src="screenshots/test_S603_SecondHalfLaterYouAre1118091750.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:17:50 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S701_ButOnlyOneSongDominatedFrame</p>
+            <p class="text-sm">
+              <span>9:18:09 PM</span> / <span>00:00:22:734</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S701_ButOnlyOneSongDominatedFrame</h5>
+<span class='badge badge-success'>11.18.2024 9:18:09 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:18:32 PM</span>
+<span class='badge badge-default'>00:00:22:734</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:18:09 PM</td>
+        <td>
+          
+Case 11: S7.01 But Only One Song Dominated
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:18:32 PM</td>
+        <td>
+          But Only One Song Dominated frame appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:18:32 PM</td>
+        <td>
+          test_S701_ButOnlyOneSongDominatedFrame
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S701_ButOnlyOneSongDominatedFrame1118091832.png' src="screenshots/test_S701_ButOnlyOneSongDominatedFrame1118091832.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:18:32 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S702_YourTopSongFrame</p>
+            <p class="text-sm">
+              <span>9:18:51 PM</span> / <span>00:00:31:654</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S702_YourTopSongFrame</h5>
+<span class='badge badge-success'>11.18.2024 9:18:51 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:19:23 PM</span>
+<span class='badge badge-default'>00:00:31:654</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:18:51 PM</td>
+        <td>
+          
+Case 12: S7.02 Your Top Song 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:19:21 PM</td>
+        <td>
+          Your Top Song Frame: 'That's a commitment'  appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:19:21 PM</td>
+        <td>
+          === Verify 'You played x times' ===
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:19:21 PM</td>
+        <td>
+          count from json: 13
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:19:22 PM</td>
+        <td>
+          You played 13 times
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:19:23 PM</td>
+        <td>
+          test_S702_YourTopSongFrame
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S702_YourTopSongFrame1118091923.png' src="screenshots/test_S702_YourTopSongFrame1118091923.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:19:23 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S801_TopSongRareCard</p>
+            <p class="text-sm">
+              <span>9:19:42 PM</span> / <span>00:00:28:672</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S801_TopSongRareCard</h5>
+<span class='badge badge-success'>11.18.2024 9:19:42 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:20:11 PM</span>
+<span class='badge badge-default'>00:00:28:672</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:19:42 PM</td>
+        <td>
+          
+Case 13: S8.01 Your Top Song Rare card
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:19:42 PM</td>
+        <td>
+          topSongID : B0CQRWN5QT
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:19:42 PM</td>
+        <td>
+          topSongTrackTitle : Apaga El Cel [Explicit]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:20:08 PM</td>
+        <td>
+          TopSong Share Card Opened
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:20:08 PM</td>
+        <td>
+          === Verify 'You are xPercentile listener'===
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:20:09 PM</td>
+        <td>
+          You are 5% listener
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:20:09 PM</td>
+        <td>
+          === Verify TopSong Title appears w/icon ===
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:20:09 PM</td>
+        <td>
+          Verify Apaga
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:20:11 PM</td>
+        <td>
+          test_S801_TopSongRareCard
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S801_TopSongRareCard1118092011.png' src="screenshots/test_S801_TopSongRareCard1118092011.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:20:11 PM</td>
+        <td>
+          Apaga El Cel [Explicit] appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:20:11 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S901_AllYourFavoriteCapturedForever</p>
+            <p class="text-sm">
+              <span>9:20:30 PM</span> / <span>00:00:29:586</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S901_AllYourFavoriteCapturedForever</h5>
+<span class='badge badge-success'>11.18.2024 9:20:30 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:21:00 PM</span>
+<span class='badge badge-default'>00:00:29:586</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:20:31 PM</td>
+        <td>
+          
+Case 14: S9.01  All Your Favorite Captured Forever 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:21:00 PM</td>
+        <td>
+          All Your Favorite Captured Forever appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:21:00 PM</td>
+        <td>
+          test_S901_AllYourFavoriteCapturedForever
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S901_AllYourFavoriteCapturedForever1118092100.png' src="screenshots/test_S901_AllYourFavoriteCapturedForever1118092100.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:21:00 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S903_MyTopSongs2024</p>
+            <p class="text-sm">
+              <span>9:21:20 PM</span> / <span>00:00:32:748</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S903_MyTopSongs2024</h5>
+<span class='badge badge-success'>11.18.2024 9:21:20 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:21:53 PM</span>
+<span class='badge badge-default'>00:00:32:748</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:21:20 PM</td>
+        <td>
+          
+Case 15: S9.03 My TopSongs 2024
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:21:50 PM</td>
+        <td>
+          Your playlist is waiting.... appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:21:50 PM</td>
+        <td>
+          My Top Songs 2024 appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:21:53 PM</td>
+        <td>
+          test_S903_MyTopSongs2024
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S903_MyTopSongs20241118092153.png' src="screenshots/test_S903_MyTopSongs20241118092153.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:21:53 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S11_0_1_YouListenToXXXArtists</p>
+            <p class="text-sm">
+              <span>9:22:12 PM</span> / <span>00:00:34:488</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S11_0_1_YouListenToXXXArtists</h5>
+<span class='badge badge-success'>11.18.2024 9:22:12 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:22:47 PM</span>
+<span class='badge badge-default'>00:00:34:488</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:22:12 PM</td>
+        <td>
+          Case 16: S11.01 You listen to xxx artists this year, but someone stole the show
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:22:45 PM</td>
+        <td>
+          total Distinct artist Count FromJson is 45
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:22:46 PM</td>
+        <td>
+          You listen to 45 artists artists
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:22:46 PM</td>
+        <td>
+          You listened to 45 artists this year, but someone stole the show
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:22:46 PM</td>
+        <td>
+          elem.getAttribute("label") = 45 artists
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:22:47 PM</td>
+        <td>
+          test_S11_0_1_YouListenToXXXArtists
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S11_0_1_YouListenToXXXArtists1118092246.png' src="screenshots/test_S11_0_1_YouListenToXXXArtists1118092246.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:22:47 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S11_02_YourTopArtist</p>
+            <p class="text-sm">
+              <span>9:23:06 PM</span> / <span>00:00:42:767</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test_S11_02_YourTopArtist</h5>
+<span class='badge badge-success'>11.18.2024 9:23:06 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:23:48 PM</span>
+<span class='badge badge-default'>00:00:42:767</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:23:06 PM</td>
+        <td>
+          
+Case 17: S11.0.2 Your Top Artist
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:23:06 PM</td>
+        <td>
+          artistID from json : B001EUK7NA
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:23:06 PM</td>
+        <td>
+          artistName from json : Elevation Worship
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:23:06 PM</td>
+        <td>
+          minutes from json : 217
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:23:48 PM</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[contains(@name, 'minutes together and trust us, they are honored')] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at org.example.YIRTestCase.test_S11_02_YourTopArtist(YIRTestCase.java:359)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.1', java.version: '23.0.1'
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [b3455474-44ef-4b4e-b128-3c86329b1297, findElement {using=xpath, value=//*[contains(@name, 'minutes together and trust us, they are honored')]}]
+Capabilities {appium:app: com.amazon.mp3.CloudPlayer, appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: iPhone_13 Pro, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 18.0, appium:showXcodeLog: true, appium:takesScreenshot: true, appium:udid: 00008110-001C45D60CC0401E, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: b3455474-44ef-4b4e-b128-3c86329b1297
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:23:48 PM</td>
+        <td>
+          Test failed
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S11_02_YourTopArtist1118092348.png' src="screenshots/test_S11_02_YourTopArtist1118092348.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S12_01_TopArtistRareCard</p>
+            <p class="text-sm">
+              <span>9:24:08 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">test_S12_01_TopArtistRareCard</h5>
+<span class='badge badge-success'>11.18.2024 9:24:08 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:24:08 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:08 PM</td>
+        <td>
+          
+Case 18: S13.0.1 Top Artist Rare Card
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:24:08 PM</td>
+        <td>
+          Test skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S14_01_TopArtists</p>
+            <p class="text-sm">
+              <span>9:24:26 PM</span> / <span>00:00:40:854</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test_S14_01_TopArtists</h5>
+<span class='badge badge-success'>11.18.2024 9:24:26 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:25:07 PM</span>
+<span class='badge badge-default'>00:00:40:854</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:26 PM</td>
+        <td>
+          
+Case 19: S14.0.1 Top Artists
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:26 PM</td>
+        <td>
+          Top Artists IDs: [Elevation Worship, The Beatles, Katy Perry, Ed Sheeran, Justin Bieber]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:07 PM</td>
+        <td>
+          Top Artists correctly displayed : [, The Beatles, Katy Perry, Ed Sheeran, Justin Bieber]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:25:07 PM</td>
+        <td>
+          Test failed. Assertion error 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:25:07 PM</td>
+        <td>
+          test_S14_01_TopArtists
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S14_01_TopArtists1118092507.png' src="screenshots/test_S14_01_TopArtists1118092507.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:25:07 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S15_01_YouDoveDeep</p>
+            <p class="text-sm">
+              <span>9:25:26 PM</span> / <span>00:00:42:280</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S15_01_YouDoveDeep</h5>
+<span class='badge badge-success'>11.18.2024 9:25:26 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:26:08 PM</span>
+<span class='badge badge-default'>00:00:42:280</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:26 PM</td>
+        <td>
+          
+Case 20: S15.0.1 You Dove Deep
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:26:08 PM</td>
+        <td>
+          test_S15_01_YouDoveDeep
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S15_01_YouDoveDeep1118092608.png' src="screenshots/test_S15_01_YouDoveDeep1118092608.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:26:08 PM</td>
+        <td>
+          You dove deep frame appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:26:08 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S15_02_EarlyListener</p>
+            <p class="text-sm">
+              <span>9:26:27 PM</span> / <span>00:00:49:165</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S15_02_EarlyListener</h5>
+<span class='badge badge-success'>11.18.2024 9:26:27 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:27:16 PM</span>
+<span class='badge badge-default'>00:00:49:165</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:26:27 PM</td>
+        <td>
+          
+Case 21: S15.0.1 Early Listener
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:16 PM</td>
+        <td>
+          TRENDSETTER Early Listener ENCUENTROS [Explicit] You were one of the first to listen to this album by Becky G on the day it dropped. cancel share
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:16 PM</td>
+        <td>
+          test_S15_01_EarlyListener
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S15_01_EarlyListener1118092716.png' src="screenshots/test_S15_01_EarlyListener1118092716.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:27:16 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S16_01_TrendSetterTopDiscovery</p>
+            <p class="text-sm">
+              <span>9:27:35 PM</span> / <span>00:00:56:057</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S16_01_TrendSetterTopDiscovery</h5>
+<span class='badge badge-success'>11.18.2024 9:27:35 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:28:31 PM</span>
+<span class='badge badge-default'>00:00:56:057</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:35 PM</td>
+        <td>
+          
+Case 22: S16.0.1 Trend Setter, TOP DISCOVERY
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:35 PM</td>
+        <td>
+          artist id: B000QJRK6W
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:35 PM</td>
+        <td>
+          Artist: David Zaizar
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:35 PM</td>
+        <td>
+          Minutes from json491
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:28 PM</td>
+        <td>
+          Found: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:30 PM</td>
+        <td>
+          label = You found this artist in June and listened for 491 minutes since!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:31 PM</td>
+        <td>
+          Verified artist name,David Zaizar, appeared
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:31 PM</td>
+        <td>
+          Verified listened for,491
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:31 PM</td>
+        <td>
+          test_S16_01_TrendSetterTopDiscovery
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S16_01_TrendSetterTopDiscovery1118092831.png' src="screenshots/test_S16_01_TrendSetterTopDiscovery1118092831.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:28:31 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S17_01_YouSpentXXXMinutesWithAlexa</p>
+            <p class="text-sm">
+              <span>9:28:50 PM</span> / <span>00:00:59:840</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S17_01_YouSpentXXXMinutesWithAlexa</h5>
+<span class='badge badge-success'>11.18.2024 9:28:50 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:29:50 PM</span>
+<span class='badge badge-default'>00:00:59:840</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:50 PM</td>
+        <td>
+          
+Case 23: S17_01 You Spent XXX Minutes With Alexa
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:50 PM</td>
+        <td>
+          Alexa Total Minutes from json: 490
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:29:50 PM</td>
+        <td>
+          From AM Alexa minutes 490
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:29:50 PM</td>
+        <td>
+          Verified spent,490, minutes with Alexa
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:29:50 PM</td>
+        <td>
+          test_S17_01_YouSpentXXXMinutesWithAlexa
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S17_01_YouSpentXXXMinutesWithAlexa1118092950.png' src="screenshots/test_S17_01_YouSpentXXXMinutesWithAlexa1118092950.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:29:50 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S17_02_AlexaPlaysSomeArtist</p>
+            <p class="text-sm">
+              <span>9:30:10 PM</span> / <span>00:01:09:833</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S17_02_AlexaPlaysSomeArtist</h5>
+<span class='badge badge-success'>11.18.2024 9:30:10 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:31:19 PM</span>
+<span class='badge badge-default'>00:01:09:833</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:30:10 PM</td>
+        <td>
+          
+Case 24: S17_02 Alexa Plays Some Artist
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:30:10 PM</td>
+        <td>
+          alexa Top Request Artist id: B08NPGFN4W
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:30:10 PM</td>
+        <td>
+          Alexa play : Diggy Graves => From json
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:31:19 PM</td>
+        <td>
+          Diggy Graves
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:31:19 PM</td>
+        <td>
+          Verified: Alexa play, Diggy Graves
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:31:19 PM</td>
+        <td>
+          test_S17_02_AlexaPlaysSomeArtist
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S17_02_AlexaPlaysSomeArtist1118093119.png' src="screenshots/test_S17_02_AlexaPlaysSomeArtist1118093119.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:31:19 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S17_04_YouAskedHerToPlayXXTimes</p>
+            <p class="text-sm">
+              <span>9:31:39 PM</span> / <span>00:01:10:668</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S17_04_YouAskedHerToPlayXXTimes</h5>
+<span class='badge badge-success'>11.18.2024 9:31:39 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:32:50 PM</span>
+<span class='badge badge-default'>00:01:10:668</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:31:39 PM</td>
+        <td>
+          
+Case 25: S17_04 S17_04 You Asked Her To Play XX Times
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:31:39 PM</td>
+        <td>
+          79 times  => from json
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:32:49 PM</td>
+        <td>
+          You asked her (nicely) to play Diggy Graves 79 times. We'll forget about the other times 😉
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:32:49 PM</td>
+        <td>
+          verifying 79 times
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:32:50 PM</td>
+        <td>
+          test_S17_04_YouAskedHerToPlayXXTimes
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S17_04_YouAskedHerToPlayXXTimes1118093249.png' src="screenshots/test_S17_04_YouAskedHerToPlayXXTimes1118093249.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:32:50 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S19_01_YourTopPodcast</p>
+            <p class="text-sm">
+              <span>9:33:09 PM</span> / <span>00:01:05:801</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S19_01_YourTopPodcast</h5>
+<span class='badge badge-success'>11.18.2024 9:33:09 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:34:15 PM</span>
+<span class='badge badge-default'>00:01:05:801</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:33:09 PM</td>
+        <td>
+          
+Case 26: S19_01 Your Top Podcast
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:33:09 PM</td>
+        <td>
+          336a989f-5606-4542-950a-d6cec4479d1d   => id from json
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:33:09 PM</td>
+        <td>
+          topPodcast From json: True Crime with Kendall Rae
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:33:09 PM</td>
+        <td>
+          165   => minutes from json
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:14 PM</td>
+        <td>
+          Verify 165 from json
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:14 PM</td>
+        <td>
+          podcastImage True Crime with Kendall Rae Mile Higher Media & Audioboom Studios You listened for 165 minutes! That's about how often you tell yourself that this obsession is definitely, totally normal. cancel share
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:15 PM</td>
+        <td>
+          test_S19_01_YourTopPodcast
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S19_01_YourTopPodcast1118093414.png' src="screenshots/test_S19_01_YourTopPodcast1118093414.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:34:15 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S20_01_TopPodcastRareCard</p>
+            <p class="text-sm">
+              <span>9:34:34 PM</span> / <span>00:01:11:673</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S20_01_TopPodcastRareCard</h5>
+<span class='badge badge-success'>11.18.2024 9:34:34 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:35:46 PM</span>
+<span class='badge badge-default'>00:01:11:673</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:34 PM</td>
+        <td>
+          
+Case 27: S20_01 Top Podcast rare card
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:34 PM</td>
+        <td>
+          336a989f-5606-4542-950a-d6cec4479d1d   => id from json
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:34 PM</td>
+        <td>
+          topPodcast From json: True Crime with Kendall Rae
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:34:34 PM</td>
+        <td>
+          minutesPercentile from json: 10
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:45 PM</td>
+        <td>
+          BIG FAN frame found
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:46 PM</td>
+        <td>
+          BIG FAN Top Podcast True Crime with Kendall Rae You're a top 10% listener cancel share
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:35:46 PM</td>
+        <td>
+          test_S20_01_TopPodcastRareCard
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S20_01_TopPodcastRareCard1118093546.png' src="screenshots/test_S20_01_TopPodcastRareCard1118093546.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:35:46 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test_S21_01_TopPodcastList</p>
+            <p class="text-sm">
+              <span>9:36:05 PM</span> / <span>00:01:19:011</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test_S21_01_TopPodcastList</h5>
+<span class='badge badge-success'>11.18.2024 9:36:05 PM</span>
+<span class='badge badge-danger'>11.18.2024 9:37:24 PM</span>
+<span class='badge badge-default'>00:01:19:011</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:05 PM</td>
+        <td>
+          
+Case 28: S21.01 Podcast list
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:36:05 PM</td>
+        <td>
+          Extracted list from json: [True Crime with Kendall Rae, Small Town Dicks, MrBallen Podcast: Strange, Dark & Mysterious Stories, Spittin Chiclets]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:37:24 PM</td>
+        <td>
+          True Crime with Kendall Rae
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:37:24 PM</td>
+        <td>
+          Small Town Dicks
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:37:24 PM</td>
+        <td>
+          MrBallen Podcast: Strange, Dark & Mysterious Stories
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:37:24 PM</td>
+        <td>
+          Spittin Chiclets
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:37:24 PM</td>
+        <td>
+          Top 10%
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:37:24 PM</td>
+        <td>
+          test_S21_01_TopPodcastList
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/test_S21_01_TopPodcastList1118093724.png' src="screenshots/test_S21_01_TopPodcastList1118093724.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:37:24 PM</td>
+        <td>
+          ---------------------------------------
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.TimeoutException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:23:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>test_S11_02_YourTopArtist</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Nov 18, 2024 09:13:29 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Nov 18, 2024 09:37:30 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>23</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='88%'>
+<b>23</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='7%'><b>2</b> tests failed,
+<b>1</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='15%'><b>24</b> events passed</small></div>
+<div>
+<small data-tooltip='2%'><b>4</b> events failed,
+<b data-tooltip='%'>125</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"test_S101_FirstPage":1.517,"test_S106_CountOfTracksIn2024Splash":5.956,"test_S201_WeSpentxxxMinutes":14.616,"test_S401_TopDecade":9.116,"test_S501_ValidateThereWereSomeGenre":8.177,"test_S502_ValidateTopGenres":19.286,"test_S602_FirstHalfObsessedWith":22.682,"test_S603_SecondHalfLaterYouAre":30.425,"test_S701_ButOnlyOneSongDominatedFrame":22.734,"test_S702_YourTopSongFrame":31.654,"test_S801_TopSongRareCard":28.672,"test_S901_AllYourFavoriteCapturedForever":29.586,"test_S903_MyTopSongs2024":32.748,"test_S11_0_1_YouListenToXXXArtists":34.488,"test_S11_02_YourTopArtist":42.767,"test_S12_01_TopArtistRareCard":0.002,"test_S14_01_TopArtists":40.854,"test_S15_01_YouDoveDeep":42.28,"test_S15_02_EarlyListener":49.165,"test_S16_01_TrendSetterTopDiscovery":56.057,"test_S17_01_YouSpentXXXMinutesWithAlexa":59.84,"test_S17_02_AlexaPlaysSomeArtist":69.833,"test_S17_04_YouAskedHerToPlayXXTimes":70.668,"test_S19_01_YourTopPodcast":65.801,"test_S20_01_TopPodcastRareCard":71.673,"test_S21_01_TopPodcastList":79.011
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 23,
+failParent: 2,
+warningParent: 0,
+skipParent: 1,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 24,
+failEvents: 4,
+warningEvents: 0,
+skipEvents: 1,
+infoEvents: 124
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

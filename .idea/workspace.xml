@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4e1db7ce-283a-4d88-b650-2297145ec923" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/YIR_Performance/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/CustomTestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/ExtentTestNGReportListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/ScreenshotUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SilenceDetector/src/main/java/org/example/SilenceDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/SilenceDetector/src/main/java/org/example/SilenceDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YIR_Performance/cnf_prime.json" beforeDir="false" afterPath="$PROJECT_DIR$/YIR_Performance/cnf_prime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YIR_Performance/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/YIR_Performance/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/JasonExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/JasonExtraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/ValidateEachFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/ValidateEachFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/YIRShareOpecCloseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/YIRShareOpecCloseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/YIRTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/YIR_Performance/src/test/java/org/example/YIRTestCase.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2oh3vut8F7nv8JCBrBC7GixkWfX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/marxyang/Desktop/Performance"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e1db7ce-283a-4d88-b650-2297145ec923" name="Changes" comment="" />
+      <created>1731308213789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731308213789</updated>
+    </task>
+    <servers />
+  </component>
+</project>

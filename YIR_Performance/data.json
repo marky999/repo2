@@ -26,7 +26,10 @@
         "B06WP75FR9": "Olivia Rodrigo",
         "B00137NS0S": "Miley Cyrus",
         "B001LYTVPE": "Teufelskicker",
-        "B000QKO05A": "Led Zeppelin"
+        "B000QKO05A": "Led Zeppelin",
+        "B000YBCXDC": "Katy Perry",
+        "B000QJRK6W": "David Zaizar",
+        "B07YN81H9J": "Seph Schlueter"
     },
     "topGenreMap": {
         "dpRWm1xb": "Dance & Electronic",
@@ -37,7 +40,9 @@
         "fPLnpcp-": "Adult Contemporary",
         "2UNjzbec": "Country",
         "timGTvCN": "Contemporary Country",
-        "NuO7Hlm6": "Alternative Pop"
+        "NuO7Hlm6": "Alternative Pop",
+        "2THZZDuI": "Teen Pop",
+        "3lAa5np2": "Singer Songwriter"
     },
     "songsMap": {
         "B004LQW0NO": "Somebody To Love Remix [feat. USHER]",
@@ -64,14 +69,31 @@
         "B0CY83GY73": "Down Bad [Explicit]",
         "B08QDQF8CL": "Hello",
         "B002PAVWQO": "The House That Built Me",
-        "B07ZFW4HV3": "L'hymne de nos campagnes 2019 [Explicit]"
+        "B07ZFW4HV3": "L'hymne de nos campagnes 2019 [Explicit]",
+        "B0BS2S4WXN": "B0DHQCPK7X",
+        "B0CNQ8LRP8": "Por Dentro [Explicit]",
+        "B0CQRWN5QT": "Apaga El Cel [Explicit]"
     },
     "topPodcastsMap": {
         "3674bfd8-6714-4522-8f59-986acc0b217e": "Doc Caro - Die Sprechstunde",
         "4be0d5bb-3dff-41d1-b0a2-4ddc6ad0ba0b": "Feuer und Flamme: Der Podcast",
         "bc88fe13-22ad-45d5-baef-7efb1d4409d0": "OMR Podcast",
         "2134955c-8f09-4602-8f7d-5e1c970af17f": "Bratwurst und Baklava - mit Özcan Cosar und Bastian Bielendorfer",
-        "56fb697f-9885-4c3f-ac54-93d015cf2e08": "OKF – Ortskontrollfahrt"
+        "56fb697f-9885-4c3f-ac54-93d015cf2e08": "OKF – Ortskontrollfahrt",
+        "8fa203db-927f-4c3b-82a2-9fe844609a4e": "Macrodosing: Arian Foster and PFT Commenter",
+        "447b0886-c4bc-479b-8f01-60a5887bfc3a": "Empire City: The Untold Ori",
+        "90c65aee-3db8-4bd1-bf28-42a85342bfe7": "Cold",
+        "af5c50e3-f556-46b2-b9ab-42650825f4db": "The Pink House with Sam Smith",
+        "1fa65743-db40-4ecb-802c-62b8eaa90a74": "Slow Burn",
+        "336a989f-5606-4542-950a-d6cec4479d1d": "True Crime with Kendall Rae",
+        "e2944e70-fe00-4d81-96bd-2fdb95bf4090": "Small Town Dicks",
+        "6d261659-cc8d-478c-b052-19dfeb25dcf5": "MrBallen Podcast: Strange, Dark & Mysterious Stories",
+        "267a4376-5399-47b0-9333-4d5b558ece18": "Spittin Chiclets"
+
+
+    },
+    "topEarlyAlbumDiscoveryMap": {
+        "B0DF9L2QMT":"NCUENTROS [Explicit]"
     }
 
 }

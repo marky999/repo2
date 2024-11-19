@@ -22,10 +22,11 @@ public class JasonExtraction {
     public static final Map<String, String> songsMap = new HashMap<>();
     public static final Map<String, String> topPodcastsMap = new HashMap<>();
     public static final Map<String, String> topEarlyAlbumDiscoveryMap = new HashMap<>();
-
+    public static final Map<String, String> topNewArtistDiscoveryMap = new HashMap<>();//
 
     static {
     try {
+
         String content = new String(Files.readAllBytes(Paths.get("data.json")));
         JSONObject jsonObject = new JSONObject(content);
 
@@ -47,17 +48,21 @@ public class JasonExtraction {
             songsMap.put(key, songsJson.getString(key));
         }
 
+        JSONObject topPodcastsJson = jsonObject.getJSONObject("topPodcastsMap");
+
+        for (String key : topPodcastsJson.keySet()) {
+            topPodcastsMap.put(key, topPodcastsJson.getString(key));
+        }
+
         //populate topEarlyAlbumDiscoveryMap
         JSONObject topEarlyAlbumJson = jsonObject.getJSONObject("topEarlyAlbumDiscoveryMap");
         for (String key : topEarlyAlbumJson.keySet()) {
             topEarlyAlbumDiscoveryMap.put(key, topEarlyAlbumJson.getString(key));
         }
-
-        JSONObject topPodcastsJson = jsonObject.getJSONObject("topPodcastsMap");
-        for (String key : topPodcastsJson.keySet()) {
-            topPodcastsMap.put(key, topPodcastsJson.getString(key));
+        JSONObject topNewArtistDiscoveryJson = jsonObject.getJSONObject("topNewArtistDiscoveryMap");
+        for (String key : topEarlyAlbumJson.keySet()) {
+            topNewArtistDiscoveryMap.put(key, topNewArtistDiscoveryJson.getString(key));
         }
-
     } catch (Exception e) {
         e.printStackTrace();
     }
@@ -71,10 +76,10 @@ public class JasonExtraction {
     static JSONArray topGenresArray;
     static JSONArray topArtistsArray;
     static JSONArray topTracksArray;
-    static JSONArray topNewArtistDiscoveryArray;
     static JSONArray topAlexaRequestsArray;
     static JSONArray topPodcastsArray;
     static JSONArray topEarlyAlbumDiscoveryArray;
+    static JSONArray topNewArtistDiscoveryArray;
 
     static JSONObject totalStatsObject;
     static JSONObject firstHalfObject;
@@ -87,10 +92,10 @@ public class JasonExtraction {
             topGenresArray = jsonObject.getJSONArray("topGenres");
             topTracksArray = jsonObject.getJSONArray("topTracks");
             topArtistsArray =  jsonObject.getJSONArray("topArtists");
-            topNewArtistDiscoveryArray = jsonObject.getJSONArray("topNewArtistDiscovery");
             topAlexaRequestsArray = jsonObject.getJSONArray("topAlexaRequests");
             topPodcastsArray = jsonObject.getJSONArray("topPodcasts");
             topEarlyAlbumDiscoveryArray = jsonObject.getJSONArray("topEarlyAlbumDiscovery");
+            topNewArtistDiscoveryArray = jsonObject.getJSONArray("topNewArtistDiscovery");
 
             firstHalfObject = jsonObject.getJSONObject("firstHalf");
             secondHalfObject = jsonObject.getJSONObject("secondHalf");
@@ -325,6 +330,15 @@ public class JasonExtraction {
             HashMap<String, Object> topPodcastsFromJSon = jsonArrayToMap(topPodcastsArray);
             dumpHashMap(topPodcastsFromJSon);
 
+            List<String> podcasts = new ArrayList<>();
+            for(Object obj :topPodcastsArray){
+                JSONObject podcast = (JSONObject) obj;
+                String topPodcastId = podcast.getString("id");
+                podcasts.add(topPodcastsMap.get(topPodcastId));
+                System.out.println(topPodcastId);
+                System.out.println("topPodcast: " + topPodcastsMap.get(topPodcastId));
+            }
+            System.out.println("topPodcast: " + podcasts);
 
         } catch (IOException e) {
             e.printStackTrace();
