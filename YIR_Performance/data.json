@@ -29,7 +29,9 @@
         "B000QKO05A": "Led Zeppelin",
         "B000YBCXDC": "Katy Perry",
         "B000QJRK6W": "David Zaizar",
-        "B07YN81H9J": "Seph Schlueter"
+        "B07YN81H9J": "Seph Schlueter",
+        "B01HFUTKDK": "Bad Bunny",
+        "B00QNUADXK": "Morgan Wallen"
     },
     "topGenreMap": {
         "dpRWm1xb": "Dance & Electronic",
@@ -94,6 +96,9 @@
     },
     "topEarlyAlbumDiscoveryMap": {
         "B0DF9L2QMT":"NCUENTROS [Explicit]"
+    },
+    "topNewArtistDiscoveryMap": {
+        "B000QJRK6W": "David Zaizar"
     }
 
 }

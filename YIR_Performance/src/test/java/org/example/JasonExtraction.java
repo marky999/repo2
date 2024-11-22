@@ -60,7 +60,7 @@ public class JasonExtraction {
             topEarlyAlbumDiscoveryMap.put(key, topEarlyAlbumJson.getString(key));
         }
         JSONObject topNewArtistDiscoveryJson = jsonObject.getJSONObject("topNewArtistDiscoveryMap");
-        for (String key : topEarlyAlbumJson.keySet()) {
+        for (String key : topNewArtistDiscoveryJson.keySet()) {
             topNewArtistDiscoveryMap.put(key, topNewArtistDiscoveryJson.getString(key));
         }
     } catch (Exception e) {

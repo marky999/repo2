@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="db85db59-b04b-4927-a7ab-eb4ee61f650a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S101_FirstPage1120110515.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S106_CountOfTracksIn2024Splash1120110541.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S11_02_YourTopArtist1120111455.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S11_0_1_YouListenToXXXArtists1120111357.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S14_01_TopArtists1120111543.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S15_01_EarlyListener1120111811.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S15_01_YouDoveDeep1120111654.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S16_01_TrendSetterTopDiscovery1120111932.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S17_01_YouSpentXXXMinutesWithAlexa1120112053.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S17_02_AlexaPlaysSomeArtist1120112227.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S17_04_YouAskedHerToPlayXXTimes1120112401.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S19_01_YourTopPodcast1120112530.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S201_WeSpentxxxMinutes1120110616.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S21_01_TopPodcastList1120112845.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S401_TopDecade1120110645.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S501_ValidateThereWereSomeGenre1120110716.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S502_ValidateTopGenres1120110756.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S602_FirstHalfObsessedWith1120110840.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S603_SecondHalfLaterYouAre1120110930.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S701_ButOnlyOneSongDominatedFrame1120111012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S702_YourTopSongFrame1120111105.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S801_TopSongRareCard1120111154.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S901_AllYourFavoriteCapturedForever1120111243.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/test_S903_MyTopSongs20241120111337.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Performance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Performance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Performance/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Performance/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Performance/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Performance/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Performance/Performance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Performance/Performance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Performance/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Performance/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SilenceDetector/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SilenceDetector/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SilenceDetector/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SilenceDetector/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SilenceDetector/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SilenceDetector/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SilenceDetector/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SilenceDetector/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SilenceDetector/src/main/java/org/example/SilenceDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SilenceDetector/src/main/java/org/example/SilenceDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnf_free.json" beforeDir="false" afterPath="$PROJECT_DIR$/cnf_free.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnf_prime.json" beforeDir="false" afterPath="$PROJECT_DIR$/cnf_prime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extent-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/extent-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/error_stringNotFound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S101_FirstPage1118100041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S106_CountOfTracksIn2024Splash1118100106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S11_02_YourTopArtist1118100932.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S11_0_1_YouListenToXXXArtists1118100832.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S14_01_TopArtists1118101128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S201_WeSpentxxxMinutes1118100141.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S401_TopDecade1118100209.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S501_ValidateThereWereSomeGenre1118100237.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S502_ValidateTopGenres1118100313.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S701_ButOnlyOneSongDominatedFrame1118100413.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S702_YourTopSongFrame1118100506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S801_TopSongRareCard1118100552.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S901_AllYourFavoriteCapturedForever1118100642.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/test_S903_MyTopSongs20241118100737.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CustomTestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CustomTestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ExtentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ExtentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ExtentTestNGReportListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ExtentTestNGReportListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/IOSSongLapseTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/IOSSongLapseTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/JasonExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/JasonExtraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/LaunchEmulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/LaunchEmulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ScreenshotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ScreenshotUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ValidateEachFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ValidateEachFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/YIRAndroidTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/YIRAndroidTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/YIRShareOpecCloseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/YIRShareOpecCloseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/YIRTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/YIRTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/testNG.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2p9Dy14jZuvyEymyJkOd1idRJ28" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="main" />
+    </force-push-targets>
+  </component>
+  <component name="RunManager" selected="TestNG./Users/markyang/Performance/YIR_Performance/src/testNG.xml">
+    <configuration name="YIRTestCase" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="YIR_Performance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.YIRTestCase" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/markyang/Performance/YIR_Performance/src/testNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="YIR_Performance" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/testNG.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG./Users/markyang/Performance/YIR_Performance/src/testNG.xml" />
+        <item itemvalue="TestNG.YIRTestCase" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db85db59-b04b-4927-a7ab-eb4ee61f650a" name="Changes" comment="" />
+      <created>1732169650761</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732169650761</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
